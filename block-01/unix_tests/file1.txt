@@ -1,0 +1,5 @@
+Olá, 
+Estou testando o Bash. Quero ver se consigo criar um arquivo, usando o cat >> sem antes ter criado o arquivo com o touch. 
+Pelo visto, consigo. 
+Está sendo muito útil este teste. Mas como será que este arquivo ficará quandoeu abrí-lo pelo GUI?
+Dúvida... vamos testar. 
