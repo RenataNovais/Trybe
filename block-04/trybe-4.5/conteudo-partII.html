@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .text-color {
+        color: blue;
+        background-color: burlywood;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p class="text-color" id="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p class="text-color">Este texto será azul.</p>
+
+    <script>
+      var paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+
+      let title = document.getElementById("page-title");
+      title = "Milagre da Cela 7"
+
+      let secondParagraph = document.getElementById("second-paragraph");
+      secondParagraph = "Este é um filme incrível, que todos deveriam assistir. Apesar de triste, é lindo e traz ensinamentos de vida e compaixão."
+
+      let subtitle = document.getElementById("subtitle");
+      subtitle = "Um filme para se emocionar!"
+
+      console.log(document.getElementsByClassName("text-color")[1].innerHTML);
+
+      console.log(document.getElementsByClassName("text-color")[0].innerHTML);
+
+      console.log(document.getElementsByTagName("h2"));
+      
+
+    </script>
+  </body>
+</html>

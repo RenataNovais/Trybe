@@ -1,0 +1,133 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Practise About Web Storage</title>
+    <style>
+      * {
+        margin: 0;
+        font-size: 15pt;
+        background-color: cornsilk;
+      }
+      .main-title {
+        text-align: center;
+        margin: 2em;
+        color: cadetblue;
+      }
+
+      h2, h3 {
+        margin-left: 2em;
+      }
+
+      .body-text {
+        margin-left: 2em;
+        padding: 1em;
+      }
+
+      #asideMenu, #menuTitle {
+        background-color: cadetblue;
+        margin: 2px 70% 5px 10px;
+      }
+
+      #listDefinition {
+        line-height: 35px;
+        list-style-type: square;
+        background-color: cadetblue;        
+      }
+
+      li {
+        font-size: 15px;
+        background-color: cadetblue;
+        color: black;
+      }
+
+      #bgColorBox, #textColor {
+        height: 22px;
+        width: 22px;
+      }
+
+      #textSize, #lineSpace {
+        width: 50px;
+        font-size: 15px;
+      }
+
+      #textFont {
+        width: 150px;
+        font-size: 15px;
+      }
+
+    </style>    
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title">Bora aprender sobre Web Storage!</h1>
+    </header>
+    <aside id="asideMenu">
+      <h4 id="menuTitle">Menu:</h4>
+      <ul id="listDefinition">
+        <li>Escolha a cor de fundo: <input type="color" id="bgColorBox"></li>
+        <li>Escolha a cor do texto: <input type="color" id="textColor"></li>
+        <li>Ajuste o tamanho da fonte: <input type="number" id="textSize"></li>
+        <li>Ajuste o espaçamento entre linhas: <input type="number" id="lineSpace"></li>
+        <li>Escolha a fonte do texto: <input type="text" id="textFont"></li>
+      </ul>
+      
+    </aside>
+    <section>
+      <h2>Aprenda sobre <strong><em>Local Storage</em></strong></h2>
+      <p class="body-text">Salva os dados sem data de expiração. Os dados não serão removidos quando o browser for fechado, ou seja, eles ficarão disponíveis enquanto não forem explicitamente removidos.</p>
+      <h2>Aprenda sobre <strong><em>Session Storage</em></strong></h2>
+      <p class="body-text">Salva os dados apenas para a sessão atual. Os dados são removidos assim que a pessoa fecha a aba (tab) ou o browser.</p>
+    </section>
+    <div>
+      <h3>E <em>Cookies</em>, pra que servem?</h3>
+      <p class="body-text">Cookies são dados salvos em pequenos arquivos de texto no computador da pessoa que utiliza Internet.<br>
+      <br>Quando o servidor envia a página web para o browser, a conexão é desligada, e o servidor não tem acesso à pessoa que realizou a requisição. Cookies foram inventados para salvar dados das pessoas no próprio browser delas, pois, dessa forma, uma página conseguirá acessá-los para executar uma lógica com os parâmetros personalizados por pessoa.</p>
+    </div>
+    
+  </body>
+
+  <script>
+    window.onload = function() {
+      let backgroundPreferences = document.getElementById("bgColorBox");
+      backgroundPreferences.addEventListener('change', watchColorPicker);
+      console.log(backgroundPreferences);
+
+      function watchColorPicker(event) {
+        document.querySelectorAll('section').forEach(function(section) {
+          section.style.backgroundColor = event.target.value});
+        document.querySelectorAll('div').forEach(function(div) {
+          div.style.backgroundColor = event.target.value});
+        document.querySelectorAll('p').forEach(function(p) {
+          p.style.backgroundColor = event.target.value});
+        document.querySelectorAll('h1').forEach(function(h1) {
+          h1.style.backgroundColor = event.target.value});
+        document.querySelectorAll('h2').forEach(function(h2) {
+          h2.style.backgroundColor = event.target.value});
+        document.querySelectorAll('h3').forEach(function(h3) {
+          h3.style.backgroundColor = event.target.value});
+        
+        let page = document.querySelector('*');
+        console.log(page);
+        page.style.backgroundColor = event.target.value;
+      }
+      
+      let textColorPreferences = document.getElementById("textColor");
+      textColorPreferences.addEventListener('change', watchColorPickerText);
+    
+      function watchColorPickerText(event) {
+        document.querySelectorAll('p').forEach(function(p) {
+          p.style.color = event.target.value;
+        });
+      }
+      
+      let fontSizeChoice = document.getElementById('textSize');
+      fontSizeChoice.addEventListener('change', changeFontSize);
+      console.log(fontSizeChoice);
+
+      function changeFontSize(event) {
+      
+      }
+
+    }
+  </script>
+</html>

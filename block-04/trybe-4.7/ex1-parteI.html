@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+  
+ <div id="story"></div>
+  
+ </body>
+ <script>
+
+   let button = document.getElementById("lib-button");
+   button.addEventListener("click", makeMadLib);
+
+   function makeMadLib () {
+     let currentValueNoun = document.getElementById("noun").value;
+     let currentValueAdjective = document.getElementById("adjective").value;
+     let currentValuePerson = document.getElementById("person").value;
+     let createStory = document.getElementById("story");
+     createStory.innerHTML = currentValuePerson +" é uma pessoa "+ currentValueAdjective+". Gosta de "+ currentValueNoun;
+   }
+
+  
+
+
+
+ </script>
+
+</html>
