@@ -1,0 +1,62 @@
+<style>
+            body {
+                font-family: Montserrat, sans-serif;
+                font-size: 15px;
+                line-height: 1.6;
+                letter-spacing: 0.5px;
+                color: #222222;
+                font-weight: 300;
+            }
+            .rn-site-title {
+                line-height: 1;
+                vertical-align: baseline;
+                font-size: 39px;
+                letter-spacing: 4.5px;
+                text-align: center;
+            }
+            .section-title{
+                font-family: Montserrat, sans-serif;
+                line-height: 1em;
+                color:#000000;
+                font-size: 25px;
+                letter-spacing: 1px;
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                background-color: #f8f0ed;
+                color: rgb(207, 145, 137);
+                padding: 15px 0px;
+            }
+            .element-sections{
+                color: black;
+                text-align: center;
+                font-family: Montserrat, sans-serif;
+                font-size: 15px;
+                letter-spacing: 0.3px;
+                line-height: 1.5em;
+                font-weight: 200;
+            }
+            .subsection-title{
+                font-size: 19px;
+                font-style: italic;
+                background-color: #f8f0ed;
+                padding: 0.5%;
+                text-transform: uppercase;
+                font-weight: 100;
+                letter-spacing: 0.5px;
+            }
+            li{
+                line-height: 2.5em;
+                letter-spacing: 0.1em;
+                font-size: 13px;
+            }
+            .hiperlink{
+                text-decoration: none;
+                color: rgb(207, 145, 137);
+                font-weight: 700;
+            }
+            #footer{
+                text-align: right;
+                line-height: 0em;
+            }
+        </style>
