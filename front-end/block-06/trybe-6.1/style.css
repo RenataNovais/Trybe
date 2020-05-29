@@ -1,0 +1,70 @@
+* {
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+}
+
+.sessaoTitulo {
+  background-color: whitesmoke;
+  border: 8px solid rgb(217, 219, 222);
+  margin: 20px auto;
+  padding: 50px 10px;
+  text-align: center;
+  width: 70%;
+}
+
+.title {
+  background-color: whitesmoke;
+}
+
+.subtitle {
+  margin: 6px;
+}
+
+.sessao {
+  background-color: whitesmoke;
+  border: 8px solid rgb(217, 219, 222);
+  margin: 20px auto;
+  padding: 50px 10px;
+  width: 70%;
+}
+
+.etiquetas {
+  background-color: lightgray;
+  margin: 30px 10px;
+}
+
+.linha {
+  height: 30px;
+  width: auto;
+}
+
+.input-field {
+  background-color: whitesmoke;
+  border: none;
+  margin: 5px auto;
+  padding: 2px;
+  width: 30%;
+}
+
+.radio {
+  margin: 10px 0 5px 10px;
+}
+
+.textarea {
+  background-color: whitesmoke;
+  height: 350px;
+  margin: 10px auto 5px 10px;
+  padding: 5px;
+  width: 400px;
+}
+
+.esquerdo {
+  display: inline-block;
+  width: 45%;
+}
+
+.direito {
+  display: inline-block;
+  margin: 10px auto 10px 10px;
+}

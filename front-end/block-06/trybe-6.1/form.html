@@ -2,9 +2,99 @@
 <html lang="eng">
   <head>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Cadastre seu currículo!</title>
   </head>
   <body>
-
+    <section class="sessaoTitulo">
+      <h1 class="title">Cadastro de Currículos</h1>
+    </section>
+    <form class="sessao" action="" method="GET">
+      <fieldset id="dados-pessoais">
+        <h4 class="subtitle">Sobre você</h4>
+        <div class="linha">
+          <label class="etiquetas" for="name" type="text">Nome: </label>
+          <input id="name" class="input-field" name="name" type="text" maxlength="40" required placeholder="Type here your name."/>
+        </div>
+        <div class="linha">
+          <label class="etiquetas" for="email">Email: </label>
+          <input id="email" class="input-field" name="email" type="email" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Type here your email"/>
+        </div>
+        <div class="linha">
+          <label class="etiquetas" for="cpf">CPF:&nbsp;&nbsp;</label>
+          <input id="cpf" class="input-field" name="CPF" type="text" maxlength="11" required placeholder="Type here your CPF, only NUMBERS"/>
+        </div>
+        <div class="linha">
+          <label class="etiquetas" for="endereco">Endereço:</label>
+          <input id="endereco" class="input-field" name="endereco" type="text" maxlength="200" required placeholder="Type here your address"/>
+        </div>
+        <div class="linha">
+          <label class="etiquetas" for="cidade">Cidade:</label>
+          <input id="cidade" class="input-field" name="cidade" type="text" maxlength="28" required placeholder="Type here your address"/>
+        </div>
+        <div class="linha">
+          <label class="etiquetas" for="estado">Estado:</label>
+          <select id="estado" class="input-field" name="estado" required>
+            <option selected value="empty">Select your state</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+        <div class="linha">
+          <input id="casa" class="radio" value="casa" name="moradia" type="radio"/>&nbsp;Casa
+          <input id="apartamento" class="radio" value="apartamento" name="moradia" type="radio"/>&nbsp;Apartamento
+        </div>
+      </fieldset>
+      <br>
+      <fieldset id="ultimo-emprego">
+        <br>
+        <div class="esquerdo">
+          <label class="etiquetas subtitle" for="sobre"><strong>Sobre seu último emprego:</strong></label><br>
+          <textarea id="sobre" class="textarea" maxlength="1000" required placeholder="Type here about your last job"></textarea>
+        </div>
+        <div class="direito">
+          <div class="linha">
+            <label class="etiquetas" for="cargo">Cargo:</label>
+            <input id="cargo" class="input-field" name="cargo" type="text" maxlength="40" required placeholder="Type here your position"/>
+          </div>
+          <div class="linha">
+            <label class="etiquetas" for="descricao-cargo">Descrição do cargo:</label>
+            <input id="descricao-cargo" class="input-field" name="descricao-cargo" type="text" maxlength="500" required placeholder="Type here your job description"/>
+          </div>
+          <div class="linha">
+            <label class="etiquetas" for="data-inicio">Data de início:</label>
+            <input id="data-inicio" class="input-field" name="data-inicio" type="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="dd/mm/aaaa"/>
+            <input required id="dia-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
+            <input required id="mes-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
+            <input required id="ano-teste" type="text" maxlength="4" style="background-color: rgb(245, 245, 245); width: 60px; border: 1px solid black;">
+          </div>
+        </div>
+      </fieldset>
+    </form>
   </body>
   <script type="text/javascript" src="script.js"></script>
 </html>
