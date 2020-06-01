@@ -24,7 +24,7 @@
 .sessao {
   background-color: whitesmoke;
   border: 8px solid rgb(217, 219, 222);
-  margin: 20px auto;
+  margin: 20px auto 10px;
   padding: 50px 10px;
   width: 70%;
 }
@@ -67,4 +67,40 @@
 .direito {
   display: inline-block;
   margin: 10px auto 10px 10px;
+}
+
+#curriculo-preenchido {
+  background-color: white;
+}
+
+.botao-enviar {
+  border: 5px solid whitesmoke;
+  margin: 5px 180px;
+  padding: 8px 8px;
+  text-align: center;
+  width: 15%;  
+}
+
+.nome-perfil {
+  background-color: whitesmoke;
+  font-size: 30px;
+  margin: auto 100px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.info-perfil, .emprego-perfil {
+  background-color: white;
+  height: 100px;
+  padding: 20px;
+}
+
+.campos-gerais {
+  background-color: whitesmoke;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-right: 80%;
+  padding: 2px 2px 2px 10px;
+  text-transform: capitalize;
 }

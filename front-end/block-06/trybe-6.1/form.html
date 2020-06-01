@@ -91,10 +91,27 @@
             <input required id="dia-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
             <input required id="mes-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
             <input required id="ano-teste" type="text" maxlength="4" style="background-color: rgb(245, 245, 245); width: 60px; border: 1px solid black;">
+            
           </div>
         </div>
       </fieldset>
     </form>
+    <button id="botao-enviar" class="botao-enviar" type="submit">Envie seu currículo!</button>
+    <div id="curriculo-preenchido" class="sessao">
+      <h1 id="nome-perfil" class="nome-perfil"></h1>
+      <div class="info-perfil">
+        <p id="email-perfil" class="campos-gerais" style="text-transform: lowercase;"></p>
+        <p id="cpf-perfil" class="campos-gerais"></p>
+        <p id="endereco-perfil" class="campos-gerais"></p>
+        <p id="cidade-perfil" class="campos-gerais"></p>
+      </div>
+      <div class="emprego-perfil">
+        <p class="campos-gerais">Sobre seu último emprego:</p>
+        <p id="cargo-perfil" class="campos-gerais"></p>
+        <p id="descricao-cargo-perfil" class="campos-gerais"></p>
+        <p id="data-perfil" class="campos-gerais"></p>
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="script.js"></script>
 </html>
