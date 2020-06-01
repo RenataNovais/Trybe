@@ -1,0 +1,56 @@
+/* http://www.flexboxdefense.com/ */
+
+/* Now some of the groups have vertical space, which is the perfect opportunity to use the align-items property. 
+Align-items positions a container's items across its cross axis and accepts the following values:
+
+flex-start: align items across the start of a container's cross axis
+flex-end: align items across the end of the cross axis
+center: align items across the center of the cross axis
+
+Note: align-items also accepts the values baseline (align items such that their baselines line up) 
+and stretch (stretch items such that they span the entire cross axis), but these values cannot be used in Flexbox Defense.*/
+
+/* Ex. 4 */
+.tower-group-1 {
+  display: flex;
+  align-items: flex-end;
+}
+.tower-group-2 {
+  display: flex;
+  align-items: flex-end;
+}
+/*This time things are a bit trickier. Try combining justify-content and align-items to score 80 or higher!
+
+justify-content
+flex-start: group items at the start of a container's main axis
+flex-end: group items at the end of the main axis
+center: group items in the center of the main axis
+space-between: evenly distribute items along the main axis such that the first item aligns at the start and the final item aligns at the end
+space-around: evenly distribute items along the main axis such that all items have equal space around them
+
+align-items
+flex-start: align items across the start of a container's cross axis
+flex-end: align items across the end of the cross axis
+center: align items across the center of the cross axis
+*/
+/* Ex. 5 */
+.tower-group-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.tower-group-2 {
+  display: flex;
+  justify-content: center;
+}
+.tower-group-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Ex. 6 */
+.tower-group-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

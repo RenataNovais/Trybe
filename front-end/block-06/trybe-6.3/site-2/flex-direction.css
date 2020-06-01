@@ -1,0 +1,70 @@
+/* http://www.flexboxdefense.com/ */
+
+/*This time you have more towers, but less horizontal room to work with.
+
+The flex-direction property is your answer. flex-direction defines the directional layout of the main and
+cross axes in the flex container.
+
+For example, although the main axis lays out horizontally and the cross axis lays out vertically by default, 
+flex-direction can rotate the axes such that the main axis lays out vertically and the cross axis lays out horizontally. 
+Accordingly, flex-direction accepts the following values:
+
+row: lay out the main axis from left to right
+row-reverse: lay out the main axis from right to left
+column: lay out the main axis from top to bottom
+column-reverse: lay out the main axis from bottom to top */ 
+
+/* Ex. 7 */
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+}
+/* Now flex-direction must be combined with a property you've learned previously. 
+You'll be responsible for determining which one! Remember: flex-direction can change the directional layout of the axes.
+
+flex-direction
+row: lay out the main axis from left to right
+row-reverse: lay out the main axis from right to left
+column: lay out the main axis from top to bottom
+column-reverse: lay out the main axis from bottom to top
+
+justify-content
+flex-start: group items at the start of a container's main axis
+flex-end: group items at the end of the main axis
+center: group items in the center of the main axis
+space-between: evenly distribute items along the main axis such that the first item aligns at the start and the final item aligns at the end
+space-around: evenly distribute items along the main axis such that all items have equal space around them
+
+align-items
+flex-start: align items across the start of a container's cross axis
+flex-end: align items across the end of the cross axis
+center: align items across the center of the cross axis
+*/
+/* Ex. 8 */
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Ex. 9 */
+.tower-group-1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
