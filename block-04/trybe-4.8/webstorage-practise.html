@@ -11,7 +11,6 @@
       .main-title {
         text-align: center;
         margin: 2em;
-        color: cadetblue;
       }
 
       h2, h3 {
@@ -24,19 +23,16 @@
       }
 
       #asideMenu, #menuTitle {
-        background-color: cadetblue;
         margin: 2px 70% 5px 10px;
       }
 
       #listDefinition {
         line-height: 35px;
-        list-style-type: square;
-        background-color: cadetblue;        
+        list-style-type: square;      
       }
 
       li {
         font-size: 15px;
-        background-color: cadetblue;
         color: black;
       }
 
@@ -64,11 +60,10 @@
     <aside id="asideMenu">
       <h4 id="menuTitle">Menu:</h4>
       <ul id="listDefinition">
-        <li>Escolha a cor de fundo: <input type="color" id="bgColorBox"></li>
-        <li>Escolha a cor do texto: <input type="color" id="textColor"></li>
-        <li>Ajuste o tamanho da fonte: <input type="number" id="textSize"></li>
-        <li>Ajuste o espaçamento entre linhas: <input type="number" id="lineSpace"></li>
-        <li>Escolha a fonte do texto: <input type="text" id="textFont"></li>
+        <li>Cor de fundo: <input type="color" id="bgColorBox">&nbsp;&nbsp;&nbsp;Cor do texto: <input type="color" id="textColor"></li>
+        <li>Tamanho da fonte: <input type="number" id="textSize"></li>
+        <li>Espaçamento entre linhas: <input type="number" id="lineSpace"></li>
+        <li>Fonte do texto: <input type="text" id="textFont"></li>
       </ul>
       
     </aside>
@@ -105,6 +100,16 @@
           h2.style.backgroundColor = event.target.value});
         document.querySelectorAll('h3').forEach(function(h3) {
           h3.style.backgroundColor = event.target.value});
+        document.querySelectorAll('ul').forEach(function(ul) {
+          ul.style.backgroundColor = event.target.value});
+        document.querySelectorAll('li').forEach(function(li) {
+          li.style.backgroundColor = event.target.value});
+        document.querySelectorAll('h4').forEach(function(h4) {
+          h4.style.backgroundColor = event.target.value});
+        document.querySelectorAll('aside').forEach(function(aside) {
+          aside.style.backgroundColor = event.target.value});
+        document.querySelectorAll('em').forEach(function(em) {
+          em.style.backgroundColor = event.target.value});
         
         let page = document.querySelector('*');
         console.log(page);
