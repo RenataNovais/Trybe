@@ -1,0 +1,55 @@
+/*https://flexboxfroggy.com/*/
+
+/* Ex. 8 - The frogs need to get in the same order as their lilypads using flex-direction. 
+This CSS property defines the direction items are placed in the container, and accepts the following values:
+row: Items are placed the same as the text direction.
+row-reverse: Items are placed opposite to the text direction.
+column: Items are placed top to bottom.
+column-reverse: Items are placed bottom to top. */
+#pond {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Ex. 9 - Help the frogs find their column of lilypads using flex-direction. 
+This CSS property defines the direction items are placed in the container, and accepts the following values:
+row: Items are placed the same as the text direction.
+row-reverse: Items are placed opposite to the text direction.
+column: Items are placed top to bottom.
+column-reverse: Items are placed bottom to top. */
+#pond {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ex. 10 - Help the frogs get to their own lilypads. Although they seem close, 
+it will take both flex-direction and justify-content to get them there.
+Notice that when you set the direction to a reversed row or column, start and end are also reversed. */
+#pond {
+  display: flex;
+flex-direction: row-reverse;
+justify-content: flex-end;
+}
+
+/* Ex. 11 - Help the frogs find their lilypads using flex-direction and justify-content.
+Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal.*/
+#pond {
+  display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+/* Ex. 12 - Help the frogs find their lilypads using flex-direction and justify-content.*/
+#pond {
+  display: flex;
+flex-direction: column-reverse;
+justify-content: space-between;
+}
+
+/* Ex. 13 - Help the frogs find their lilypads using flex-direction, justify-content, and align-items.*/
+#pond {
+  display: flex;
+flex-direction: row-reverse;
+justify-content: center;
+align-items: flex-end;
+}

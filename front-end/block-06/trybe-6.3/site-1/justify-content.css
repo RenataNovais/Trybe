@@ -1,0 +1,46 @@
+/*https://flexboxfroggy.com/*/
+
+/* Ex. 1 - Welcome to Flexbox Froggy, a game where you help Froggy and friends by writing CSS code! 
+Guide this frog to the lilypad on the right by using the justify-content property, which aligns items 
+horizontally and accepts the following values:
+
+flex-start: Items align to the left side of the container.
+flex-end: Items align to the right side of the container.
+center: Items align at the center of the container.
+space-between: Items display with equal spacing between them.
+space-around: Items display with equal spacing around them.
+For example, justify-content: flex-end; will move the frog to the right. */
+
+#pond {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Ex. 2 - Use justify-content again to help these frogs get to their lilypads. 
+Remember that this CSS property aligns items horizontally and accepts the following values:
+flex-start: Items align to the left side of the container.
+flex-end: Items align to the right side of the container.
+center: Items align at the center of the container.
+space-between: Items display with equal spacing between them.
+space-around: Items display with equal spacing around them. */
+#pond {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ex. 3 - Help all three frogs find their lilypads just by using justify-content. 
+This time, the lilypads have lots of space all around them.
+
+If you find yourself forgetting the possible values for a property, 
+you can hover over the property name to view them. Try hovering over justify-content. */
+#pond {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Ex. 4 - Now the lilypads on the edges have drifted to the shore, increasing the space between them. 
+Use justify-content. This time, the lilypads have equal spacing between them. */
+#pond {
+  display: flex;
+  justify-content: space-between;
+}
