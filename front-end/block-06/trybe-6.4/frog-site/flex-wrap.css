@@ -1,0 +1,29 @@
+/* https://flexboxfroggy.com/ ex 14 a 24*/
+
+/* Ex. 18 - Oh no! The frogs are all squeezed onto a single row of lilypads. 
+Spread them out using the flex-wrap property, which accepts the following values:
+
+nowrap: Every item is fit to a single line.
+wrap: Items wrap around to additional lines.
+wrap-reverse: Items wrap around to additional lines in reverse. */
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Ex. 19 - Help this army of frogs form three orderly columns using a combination of flex-direction and flex-wrap.*/
+#pond {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* Ex. 20 - The two properties flex-direction and flex-wrap are used so often together that the shorthand property 
+flex-flow was created to combine them. This shorthand property accepts the value of one of the two properties separated by 
+a space.
+For example, you can use flex-flow: row wrap to set rows and wrap them.
+Try using flex-flow to repeat the previous level. */
+pond {
+  display: flex;
+  flex-flow: column wrap;
+}
