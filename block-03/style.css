@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: quicksand, sans-serif;
 }
 
 .main-section {
@@ -10,7 +11,6 @@
   background-color: black;
   height: 100vh;
   color: white;
-  font-family: quicksand;
   text-transform: uppercase;
   width: 50%;
 }
@@ -20,7 +20,6 @@
 }
 
 .separation {
-  font-family: quicksand;
   font-size: 30px;
   color: rgb(93, 93, 93);
 }
@@ -48,7 +47,6 @@ h2.name {
 .sub-intro > h3 {
   background-color: rgb(252, 233, 58);
   color: black;
-  font-family: quicksand;
   margin-left: 350px;
   padding: 2vh 1vh;
   text-align: center;
@@ -69,7 +67,6 @@ h2.name {
   background-color: rgb(93, 93, 93);
   color: white;
   display: flex;
-  font-family: quicksand;
   font-weight: 700;
   height: 10vh;
   justify-content: space-around;
@@ -90,7 +87,6 @@ a:hover {
 .about {
   background-color: rgb(236, 236, 236);
   display: flex;
-  font-family: quicksand;
   justify-content: space-between;
   padding: 5vh;
 }
@@ -102,6 +98,43 @@ a:hover {
   justify-content: space-between;
 }
 
+.squares {
+  margin-left: 20%;
+  margin-top: 2%;
+}
+
+.bg-yellow {
+  background-color: rgb(252, 233, 58);
+  height: 10%;
+  width: 300px;
+  z-index: 0;
+}
+
+.squares2 {
+  display: flex;
+  margin: 0;
+}
+
+.bg-yellow2 {
+  background-color: rgb(252, 233, 58);
+  height: 250px;
+  width: 15%;
+  z-index: 0;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+  height: 300px;
+  text-align: center;
+  width: 350px;
+  z-index: 1;
+}
+
+.bg-black > video {
+  padding-top: 10%;
+}
+
 .separationTwo {
   color: rgb(93, 93, 93);
   font-size: 25px;
@@ -109,23 +142,9 @@ a:hover {
   width: 1%;
 }
 
-.bg-yellow {
-  background-color: rgb(252, 233, 58);
-  height: 300px;
-  width: 300px;
-  margin-left: 0;
-  z-index: 0;
-}
-
-.bg-black {
-  background-color: black;
-  height: 300px;
-  width: 300px;
-  z-index: 1;
-}
-
 .right-about {
   width: 50%;
+  margin-top: 2%;
 }
 
 .right-about > p, h1, h5 {
@@ -136,7 +155,6 @@ a:hover {
   background-color: rgb(236, 236, 236);
   margin: 0;
   padding: 5vh;
-  font-family: quicksand;
 }
 
 .projects > h2 {
@@ -147,29 +165,62 @@ a:hover {
 
 .grid-proj {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .grid-proj > a {
   background-color: rgb(252, 233, 58);
-  border: rgb(93, 93, 93);
-  width: 300px;
-  height: 300px;
+  border: 2px solid rgb(252, 233, 58);
   font-size: 200px;
+  height: 200px;
+  margin-left: 10px;
   opacity: 100%;
+  width: 200px;
+}
+
+.grid-proj > a:first-child {
+  margin-left: 0;
 }
 
 .grid-proj > a > img {
-  width: 300px;
-  height: 300px;
+  height: 200px;
+  width: 200px;
 }
 
 .footer {
-  background-color: rgb(93, 93, 93);
-  color: rgb(252, 233, 58);
-  font-family: quicksand;
-  padding: 4vh;
+  background-color: rgb(23, 23, 23);
+  color: white;
+  padding: 1vh 5vh;
+  text-align: justify;
+}
+
+.footer > h5 {
+  text-transform: uppercase;
+  background-color: rgb(252, 233, 58);
+  color: rgb(23, 23, 23);
+  width: 8%;
+  padding: 0.5vh 1vh;
+  text-align: center;
+}
+
+footer > h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 1vh 1vh;
+}
+
+.contact-link {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.footer > h6 {
+  text-align: center;
+  padding: 3vh 0 0;
 }
