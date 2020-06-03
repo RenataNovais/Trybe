@@ -1,119 +1,70 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Practise About Web Storage</title>
-    <style>
-      * {
-        margin: 0;
-        font-size: 15pt;
-        background-color: cornsilk;
-      }
-      .main-title {
-        text-align: center;
-        margin: 2em;
-      }
-
-      h2, h3 {
-        margin-left: 2em;
-      }
-
-      .body-text {
-        margin-left: 2em;
-        padding: 1em;
-      }
-
-      #asideMenu, #menuTitle {
-        margin: 2px 70% 5px 10px;
-      }
-
-      #listDefinition {
-        line-height: 35px;
-        list-style-type: square;      
-      }
-
-      li {
-        font-size: 15px;
-        color: black;
-      }
-
-      #bgColorBox, #textColor {
-        height: 22px;
-        width: 22px;
-      }
-
-      #textSize, #lineSpace {
-        width: 50px;
-        font-size: 15px;
-      }
-
-      #textFont {
-        width: 150px;
-        font-size: 15px;
-      }
-
-    </style>    
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
     <header>
-      <h1 class="main-title">Bora aprender sobre Web Storage!</h1>
-    </header>
-    <aside id="asideMenu">
       <h4 id="menuTitle">Menu:</h4>
       <ul id="listDefinition">
         <li>Cor de fundo: <input type="color" id="bgColorBox">&nbsp;&nbsp;&nbsp;Cor do texto: <input type="color" id="textColor"></li>
         <li>Tamanho da fonte: <input type="number" id="textSize"></li>
         <li>Espaçamento entre linhas: <input type="number" id="lineSpace"></li>
-        <li>Fonte do texto: <input type="text" id="textFont"></li>
+        <li>Fonte do texto: <select type="text" id="textFont">
+          <option value="">Escolha a letra!</option>
+          <option value="Arial, Helvetica, sans-serif;" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
+          <option value="Cambria, Cochin, Georgia, Times, 'Times New Roman;" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Cambria</option>
+          <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+          <option value="monospace;" style="font-family: monospace;">Monospace</option>
+          <option value="'Times New Roman', Times, serif;" style="font-family: 'Times New Roman', Times, serif;">Time New Roman</option>
+          <option value="Verdana, Geneva, Tahoma, sans-serif;" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verdana</option>
+        </select></li>
       </ul>
-      
-    </aside>
-    <section>
-      <h2>Aprenda sobre <strong><em>Local Storage</em></strong></h2>
+    </header>
+    <h1 class="main-title">Bora aprender sobre Web Storage!</h1>
+    <section class="body-content">
       <p class="body-text">Salva os dados sem data de expiração. Os dados não serão removidos quando o browser for fechado, ou seja, eles ficarão disponíveis enquanto não forem explicitamente removidos.</p>
-      <h2>Aprenda sobre <strong><em>Session Storage</em></strong></h2>
       <p class="body-text">Salva os dados apenas para a sessão atual. Os dados são removidos assim que a pessoa fecha a aba (tab) ou o browser.</p>
-    </section>
-    <div>
-      <h3>E <em>Cookies</em>, pra que servem?</h3>
       <p class="body-text">Cookies são dados salvos em pequenos arquivos de texto no computador da pessoa que utiliza Internet.<br>
       <br>Quando o servidor envia a página web para o browser, a conexão é desligada, e o servidor não tem acesso à pessoa que realizou a requisição. Cookies foram inventados para salvar dados das pessoas no próprio browser delas, pois, dessa forma, uma página conseguirá acessá-los para executar uma lógica com os parâmetros personalizados por pessoa.</p>
-    </div>
-    
+      <p class="body-text">Salva os dados sem data de expiração. Os dados não serão removidos quando o browser for fechado, ou seja, eles ficarão disponíveis enquanto não forem explicitamente removidos.</p>
+      <p class="body-text">Salva os dados apenas para a sessão atual. Os dados são removidos assim que a pessoa fecha a aba (tab) ou o browser.</p>
+      <p class="body-text">Cookies são dados salvos em pequenos arquivos de texto no computador da pessoa que utiliza Internet.<br>
+      <br>Quando o servidor envia a página web para o browser, a conexão é desligada, e o servidor não tem acesso à pessoa que realizou a requisição. Cookies foram inventados para salvar dados das pessoas no próprio browser delas, pois, dessa forma, uma página conseguirá acessá-los para executar uma lógica com os parâmetros personalizados por pessoa.</p>
+    </section>
+    <footer>Página teste - curso Trybe/Renata Novais mai-2020</footer>  
   </body>
-
   <script>
     window.onload = function() {
+      
+      //get items
+      let bgColor = localStorage.getItem('backgroundColor');
+      let txtColor = localStorage.getItem('textColor');
+      let txtSize = localStorage.getItem('textSize');
+      let lnSpace = localStorage.getItem('lineSpace');
+      let fontF = localStorage.getItem('fontFamily');
+
+      //presets
+      function presets() {
+        document.querySelectorAll('p').forEach(function(p) {
+          p.style.backgroundColor = bgColor;
+          p.style.color = txtColor;
+          p.style.fontSize = txtSize + 'px';
+          p.style.lineHeight = lnSpace + 'px';
+          p.style.fontFamily = fontF;
+        });
+      }
+      presets();
+
       let backgroundPreferences = document.getElementById("bgColorBox");
       backgroundPreferences.addEventListener('change', watchColorPicker);
-      console.log(backgroundPreferences);
 
       function watchColorPicker(event) {
-        document.querySelectorAll('section').forEach(function(section) {
-          section.style.backgroundColor = event.target.value});
-        document.querySelectorAll('div').forEach(function(div) {
-          div.style.backgroundColor = event.target.value});
         document.querySelectorAll('p').forEach(function(p) {
-          p.style.backgroundColor = event.target.value});
-        document.querySelectorAll('h1').forEach(function(h1) {
-          h1.style.backgroundColor = event.target.value});
-        document.querySelectorAll('h2').forEach(function(h2) {
-          h2.style.backgroundColor = event.target.value});
-        document.querySelectorAll('h3').forEach(function(h3) {
-          h3.style.backgroundColor = event.target.value});
-        document.querySelectorAll('ul').forEach(function(ul) {
-          ul.style.backgroundColor = event.target.value});
-        document.querySelectorAll('li').forEach(function(li) {
-          li.style.backgroundColor = event.target.value});
-        document.querySelectorAll('h4').forEach(function(h4) {
-          h4.style.backgroundColor = event.target.value});
-        document.querySelectorAll('aside').forEach(function(aside) {
-          aside.style.backgroundColor = event.target.value});
-        document.querySelectorAll('em').forEach(function(em) {
-          em.style.backgroundColor = event.target.value});
-        
-        let page = document.querySelector('*');
-        console.log(page);
-        page.style.backgroundColor = event.target.value;
+          p.style.backgroundColor = event.target.value
+        });
+        localStorage.setItem('backgroundColor', event.target.value);
       }
       
       let textColorPreferences = document.getElementById("textColor");
@@ -123,16 +74,41 @@
         document.querySelectorAll('p').forEach(function(p) {
           p.style.color = event.target.value;
         });
+        localStorage.setItem('textColor', event.target.value);
       }
       
       let fontSizeChoice = document.getElementById('textSize');
       fontSizeChoice.addEventListener('change', changeFontSize);
-      console.log(fontSizeChoice);
 
       function changeFontSize(event) {
-      
+        let newSize = document.getElementById('textSize').value;
+        document.querySelectorAll('p').forEach(function(p) {
+          p.style.fontSize = newSize + 'px';
+        });
+        localStorage.setItem('textSize', event.target.value);
       }
 
+      let lineSpaceChoice = document.getElementById('lineSpace');
+      lineSpaceChoice.addEventListener('change', changeLineSpace);
+
+      function changeLineSpace(event) {
+        let newSpace = document.getElementById('lineSpace').value;
+        document.querySelectorAll('p').forEach(function(p) {
+          p.style.lineHeight = newSpace + 'px';
+        });
+        localStorage.setItem('lineSpace', event.target.value);
+      }  
+      
+      function changeFont(event) {
+        document.querySelectorAll('p').forEach(function changeFont(p) {
+          let fontFamilyChoice = document.getElementById('textFont').value;
+          p.style.fontFamily = fontFamilyChoice;
+          localStorage.setItem('fontFamily', fontFamilyChoice);
+          console.log(fontFamilyChoice);
+        });
+      }  
+      document.getElementById('textFont').addEventListener('change', changeFont);
+      
     }
   </script>
 </html>
