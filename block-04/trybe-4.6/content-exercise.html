@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="paiDoPai">
+      <div id="pai">
+        <div id="primeiroFilho"></div>
+        <div id="elementoOndeVoceEsta">
+          <div id="primeiroFilhoDoFilho"></div>
+          <div id="segundoEUltimoFilhoDoFilho"></div>
+        </div>
+        Atenção!
+        <div id="terceiroFilho"></div>
+        <div id="quartoEUltimoFilho"></div>
+      </div>
+    </div>
+
+    <script>
+      console.log(document.querySelector("#elementoOndeVoceEsta"));
+      document.querySelector("#elementoOndeVoceEsta").parentNode.style.color = "red";    
+      console.log(document.querySelector("#elementoOndeVoceEsta").firstChild.nextSibling);
+      
+      function addText(text){
+        document.querySelector("#elementoOndeVoceEsta").firstChild.nextSibling.innerHTML = text;
+      }
+      addText("Este é o texto da seção primeiro filho do filho");
+      console.log(document.getElementById("primeiroFilhoDoFilho").innerHTML);
+    
+      console.log(document.querySelector("#pai").firstElementChild);
+      console.log(document.querySelector("#elementoOndeVoceEsta").previousElementSibling);
+      console.log(document.querySelector("#elementoOndeVoceEsta").parentNode.innerHTML);
+      console.log(document.querySelector("#elementoOndeVoceEsta").parentNode.lastElementChild.previousElementSibling);
+      console.log(document.querySelector("#pai").lastElementChild.previousElementSibling)
+
+      let pOne = document.createElement("p");
+      pOne.innerHTML = "Irmão do Elemento Onde Voce Esta";
+      document.getElementById("pai").appendChild(pOne);
+
+      let pTwo = document.createElement("p")
+      pTwo.innerHTML = "Filho do Elemento Onde Voce Esta";
+      document.getElementById("elementoOndeVoceEsta").appendChild(pTwo);
+
+      let pThree = document.createElement("p");
+      pThree.innerHTML = "Filho do primeiroFilhoDoFilho";
+      document.getElementById("primeiroFilhoDoFilho").appendChild(pThree);
+      pThree.id = "pThree"
+      console.log(document.querySelector("pThree").innerHTML); 
+
+    </script>
+
+
+  </body>
+</html>
