@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="eng">
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="style.css"/>-->
+    <link rel="stylesheet" href="lib/justValidateTooltip.min.css">
+    <!-- importing Google Icon Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- importing Materialize lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- importing DatePickerX lib -->
+    <link rel="stylesheet" href="lib/DatePickerX.min.css">
     <title>Cadastre seu currículo!</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body>
-    <section class="sessaoTitulo">
-      <h1 class="title">Cadastro de Currículos</h1>
+  <body class="green lighten-4 container">
+    <section>
+      <h1 class="green darken-1 green-text text-lighten-4">Cadastro de Currículos</h1>
     </section>
-    <form id="forms" class="sessao" action="" method="GET">
+    <form id="forms" class="js-form form green lighten-4 green-text text-lighten-4" action="" method="GET">
       <fieldset id="dados-pessoais">
-        <h4 class="subtitle">Sobre você</h4>
+        <h4 class="green darken-1">Sobre você</h4>
         <div class="linha">
-          <label class="etiquetas" for="name" type="text">Nome: </label>
-          <input id="name" class="input-field" name="name" type="text" maxlength="40" required placeholder="Type here your name."/>
+          <label class="green-text text-darken-1" for="name" type="text">Nome: </label>
+          <input data-validate-field="name" class="form__input input-field" name="name" type="text" maxlength="40" required placeholder="Type here your name."/>
         </div>
         <div class="linha">
-          <label class="etiquetas" for="email">Email: </label>
-          <input id="email" class="input-field" name="email" type="email" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Type here your email"/>
+          <label class="green-text text-darken-1" for="email">Email: </label>
+          <input data-validate-field="email" class="form__input input-field" name="email" type="email" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Type here your email"/>
         </div>
         <div class="linha">
-          <label class="etiquetas" for="cpf">CPF:&nbsp;&nbsp;</label>
-          <input id="cpf" class="input-field" name="CPF" type="text" maxlength="11" required placeholder="Type here your CPF, only NUMBERS"/>
+          <label class="green-text text-darken-1" for="cpf">CPF:&nbsp;&nbsp;</label>
+          <input data-validate-field="cpf" class="form__input input-field" name="CPF" type="text" maxlength="11" required placeholder="Type here your CPF, only NUMBERS"/>
         </div>
         <div class="linha">
-          <label class="etiquetas" for="endereco">Endereço:</label>
-          <input id="endereco" class="input-field" name="endereco" type="text" maxlength="200" required placeholder="Type here your address"/>
+          <label class="green-text text-darken-1" for="endereco">Endereço:</label>
+          <input data-validate-field="endereco" class="form__input input-field" name="endereco" type="text" maxlength="200" required placeholder="Type here your address"/>
         </div>
         <div class="linha">
-          <label class="etiquetas" for="cidade">Cidade:</label>
-          <input id="cidade" class="input-field" name="cidade" type="text" maxlength="28" required placeholder="Type here your address"/>
+          <label class="green-text text-darken-1" for="cidade">Cidade:</label>
+          <input data-validate-field="cidade" class="form__input input-field" name="cidade" type="text" maxlength="28" required placeholder="Type here your address"/>
         </div>
-        <div class="linha">
-          <label class="etiquetas" for="estado">Estado:</label>
-          <select id="estado" class="input-field" name="estado" required>
-            <option selected value="empty">Select your state</option>
+        <div class="input-field col s12">
+          <select>
+            <option selected value="">Select your state</option>
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
             <option value="AP">Amapá</option>
@@ -63,44 +71,62 @@
             <option value="SE">Sergipe</option>
             <option value="TO">Tocantins</option>
           </select>
+          <label class="green-text text-darken-1">Estado:</label>
         </div>
-        <div class="linha">
-          <input id="casa" class="radio" value="casa" name="moradia" type="radio"/>&nbsp;Casa
-          <input id="apartamento" class="radio" value="apartamento" name="moradia" type="radio"/>&nbsp;Apartamento
+        <br><br>
+        <div class="col s12">
+          <label class="green-text text-darken-1">Residência:
+          <br>
+            <label>
+              <input class="with-gap" id="casa" value="casa" name="group-1" type="radio"/>
+              <span>Casa</span>
+            </label>
+            <label>
+              <input class="with-gap" id="apartamento" value="apartamento" name="group-1" type="radio"/>
+              <span>Apartamento</span>
+            </label>
+          </label>
         </div>
       </fieldset>
       <br>
       <fieldset id="ultimo-emprego" class="ultimo-emprego">
         <br>
-        <div class="ultimo-emprego">
-        <div class="esquerdo">
-          <label class="etiquetas subtitle" for="sobre"><strong>Sobre seu último emprego:</strong></label><br>
-          <textarea id="sobre" class="textarea" maxlength="1000" required placeholder="Type here about your last job"></textarea>
-        </div>
-        <div class="direito">
-          <div class="linha">
-            <label class="etiquetas" for="cargo">Cargo:</label>
-            <input id="cargo" class="input-field" name="cargo" type="text" maxlength="40" required placeholder="Type here your position"/>
+        <div class="row">
+          <div class="col s6">
+            <label class="green-text text-darken-1 subtitle" for="sobre"><strong>Sobre seu último emprego:</strong></label><br>
+            <textarea data-validate-field="sobre" class="form__input materialize-textarea" maxlength="1000" required placeholder="Type here about your last job"></textarea>
           </div>
-          <div class="linha">
-            <label class="etiquetas" for="descricao-cargo">Descrição do cargo:</label>
-            <input id="descricao-cargo" class="input-field" name="descricao-cargo" type="text" maxlength="500" required placeholder="Type here your job description"/>
+          <div class="col s6">
+            <div class="linha">
+              <label class="green-text text-darken-1" for="cargo">Cargo:</label>
+              <input data-validate-field="cargo" class="form__input input-field" name="cargo" type="text" maxlength="40" required placeholder="Type here your position"/>
+            </div>
+            <div class="linha">
+              <label class="green-text text-darken-1" for="descricao-cargo">Descrição do cargo:</label>
+              <input data-validate-field="descricao-cargo" class="form__input input-field" name="descricao-cargo" type="text" maxlength="500" required placeholder="Type here your job description"/>
+            </div>
+            <div class="linha">
+              <label class="green-text text-darken-1" for="data-inicio">Data de início:</label>
+              <!--<input id="data-inicio" class="input-field" name="data-inicio" type="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="dd/mm/aaaa"/>-->
+              <input data-validate-field="date" class="form-control" type="text" id="date" name="date" placeholder="dd/mm/yyyy">
+            </div>
           </div>
-          <div class="linha">
-            <label class="etiquetas" for="data-inicio">Data de início:</label>
-            <!--<input id="data-inicio" class="input-field" name="data-inicio" type="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="dd/mm/aaaa"/>-->
-            <input required id="dia-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
-            <input required id="mes-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
-            <input required id="ano-teste" type="text" maxlength="4" style="background-color: rgb(245, 245, 245); width: 60px; border: 1px solid black;">
-          </div>
-        </div>
         </div>
       </fieldset>
     </form>
     <section class="buttons">
-      <button id="botao-enviar" class="botao-enviar" type="submit">Envie seu currículo!</button>
-      <button id="clear-forms" class="botao-limpar">Limpar Forms</button>
+      <button id="botao-enviar" class="btn waves-effect waves-light green darken-1" type="submit">
+        Envie seu currículo
+        <i class="material-icons right">send</i>
+      </button>
+      <button class="waves-effect waves-light btn-small green lighten-4 green-text text-darken-1">
+        <i class="material-icons">clear</i>
+      </button>
     </section>
   </body>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="lib/just-validate.min.js"></script>
+  <script src="lib/DatePickerX.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>

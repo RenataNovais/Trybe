@@ -1,3 +1,58 @@
+// lib materialize instruction to select field
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+
+// Or with jQuery
+
+// $(document).ready(function(){
+//   $('select').formSelect();
+// });
+// end here the select field instruction
+
+// Just validate
+function dataValidation() {
+  new window.JustValidate('form', {
+    rules: {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      CPF: {
+        required: true,      
+      }, 
+      address: {
+        required: true,
+      },
+      city: {
+        required: true,
+      },
+      state: {
+        required: true,
+      },
+      radio: {
+        required: true,
+      }, 
+      summary: {
+        required: true,
+      },
+      role: {
+        required: true,
+      },
+      roleDescription: {
+        required: true,
+      },
+      date: {
+        required: true,
+      }
+    }
+  });
+}
+
 const dia = document.getElementById('dia-teste');
 const mes = document.getElementById('mes-teste');
 const ano = document.getElementById('ano-teste');
