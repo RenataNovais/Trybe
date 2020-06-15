@@ -1,0 +1,101 @@
+* {
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+}
+
+.sessaoTitulo {
+  background-color: whitesmoke;
+  border: 8px solid rgb(217, 219, 222);
+  margin: 20px auto;
+  padding: 50px 10px;
+  text-align: center;
+  width: 70%;
+}
+
+.title {
+  background-color: whitesmoke;
+}
+
+.subtitle {
+  margin: 6px;
+}
+
+.sessao {
+  background-color: whitesmoke;
+  border: 8px solid rgb(217, 219, 222);
+  margin: 20px auto 10px;
+  padding: 50px 10px;
+  width: 70%;
+}
+
+.etiquetas {
+  background-color: lightgray;
+  margin: 30px 10px;
+}
+
+.linha {
+  height: 30px;
+  width: auto;
+}
+
+.input-field {
+  background-color: whitesmoke;
+  border: none;
+  margin: 5px auto;
+  padding: 2px;
+  width: 30%;
+}
+
+.radio {
+  margin: 10px 0 5px 10px;
+}
+
+.textarea {
+  background-color: whitesmoke;
+  height: 350px;
+  margin: 10px auto 5px 10px;
+  padding: 5px;
+  width: 400px;
+}
+
+.ultimo-emprego {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.esquerdo {
+  width: 50%;
+}
+
+.direito {
+  margin: 10px auto;
+  width: 45%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.botao-enviar {
+  border: 5px solid whitesmoke;
+  font-weight: 700;
+  margin: 5px 180px;
+  padding: 8px 8px;
+  text-align: center;
+  width: 15%;  
+}
+
+.botao-limpar {
+  border: 2px solid whitesmoke;
+  border-radius: 15vh;
+  color: gray;
+  font-weight: 700;
+  margin: 5px 180px;
+  padding: 4px 4px;
+  text-align: center;
+  width: 10%;  
+}
