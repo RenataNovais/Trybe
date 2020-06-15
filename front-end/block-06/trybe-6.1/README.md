@@ -1,4 +1,4 @@
-<h1>Criando um formulário de currículo.<h1>
+<h1>Criando um formulário de currículo.</h1>
 <ul>
   <li>Crie um arquivo HTML chamado <i>form.html</i> para o formulário.</li>
   <li>Caso julgue necessário, crie estilos CSS para o seu formulário, de acordo com a sua imaginação. Coloque-os em um arquivo <i>styles.css</i>.</li>
@@ -6,7 +6,7 @@
 </ul>
 <h3>Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:</h3>
 <ol>
-  <li>Crie um ```<fieldset>``` para os seguintes dados pessoais:
+  <li>Crie um <<b>fieldset</b>> para os seguintes dados pessoais:
     <ul>
       <li>Nome - Texto
         <ul>
