@@ -8,7 +8,7 @@
     <section class="sessaoTitulo">
       <h1 class="title">Cadastro de Currículos</h1>
     </section>
-    <form class="sessao" action="" method="GET">
+    <form id="forms" class="sessao" action="" method="GET">
       <fieldset id="dados-pessoais">
         <h4 class="subtitle">Sobre você</h4>
         <div class="linha">
@@ -70,8 +70,9 @@
         </div>
       </fieldset>
       <br>
-      <fieldset id="ultimo-emprego">
+      <fieldset id="ultimo-emprego" class="ultimo-emprego">
         <br>
+        <div class="ultimo-emprego">
         <div class="esquerdo">
           <label class="etiquetas subtitle" for="sobre"><strong>Sobre seu último emprego:</strong></label><br>
           <textarea id="sobre" class="textarea" maxlength="1000" required placeholder="Type here about your last job"></textarea>
@@ -87,31 +88,19 @@
           </div>
           <div class="linha">
             <label class="etiquetas" for="data-inicio">Data de início:</label>
-            <input id="data-inicio" class="input-field" name="data-inicio" type="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="dd/mm/aaaa"/>
+            <!--<input id="data-inicio" class="input-field" name="data-inicio" type="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="dd/mm/aaaa"/>-->
             <input required id="dia-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
             <input required id="mes-teste" type="text" maxlength="2" style="background-color: rgb(245, 245, 245); width: 30px; border: 1px solid black;">&nbsp;/
             <input required id="ano-teste" type="text" maxlength="4" style="background-color: rgb(245, 245, 245); width: 60px; border: 1px solid black;">
-            
           </div>
+        </div>
         </div>
       </fieldset>
     </form>
-    <button id="botao-enviar" class="botao-enviar" type="submit">Envie seu currículo!</button>
-    <div id="curriculo-preenchido" class="sessao">
-      <h1 id="nome-perfil" class="nome-perfil"></h1>
-      <div class="info-perfil">
-        <p id="email-perfil" class="campos-gerais" style="text-transform: lowercase;"></p>
-        <p id="cpf-perfil" class="campos-gerais"></p>
-        <p id="endereco-perfil" class="campos-gerais"></p>
-        <p id="cidade-perfil" class="campos-gerais"></p>
-      </div>
-      <div class="emprego-perfil">
-        <p class="campos-gerais">Sobre seu último emprego:</p>
-        <p id="cargo-perfil" class="campos-gerais"></p>
-        <p id="descricao-cargo-perfil" class="campos-gerais"></p>
-        <p id="data-perfil" class="campos-gerais"></p>
-      </div>
-    </div>
+    <section class="buttons">
+      <button id="botao-enviar" class="botao-enviar" type="submit">Envie seu currículo!</button>
+      <button id="clear-forms" class="botao-limpar">Limpar Forms</button>
+    </section>
   </body>
   <script type="text/javascript" src="script.js"></script>
 </html>

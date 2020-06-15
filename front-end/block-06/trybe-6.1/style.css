@@ -59,48 +59,43 @@
   width: 400px;
 }
 
+.ultimo-emprego {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .esquerdo {
-  display: inline-block;
-  width: 45%;
+  width: 50%;
 }
 
 .direito {
-  display: inline-block;
-  margin: 10px auto 10px 10px;
+  margin: 10px auto;
+  width: 45%;
 }
 
-#curriculo-preenchido {
-  background-color: white;
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .botao-enviar {
   border: 5px solid whitesmoke;
+  font-weight: 700;
   margin: 5px 180px;
   padding: 8px 8px;
   text-align: center;
   width: 15%;  
 }
 
-.nome-perfil {
-  background-color: whitesmoke;
-  font-size: 30px;
-  margin: auto 100px;
+.botao-limpar {
+  border: 2px solid whitesmoke;
+  border-radius: 15vh;
+  color: gray;
+  font-weight: 700;
+  margin: 5px 180px;
+  padding: 4px 4px;
   text-align: center;
-  text-transform: uppercase;
-}
-
-.info-perfil, .emprego-perfil {
-  background-color: white;
-  height: 100px;
-  padding: 20px;
-}
-
-.campos-gerais {
-  background-color: whitesmoke;
-  font-size: 14px;
-  line-height: 20px;
-  margin-left: 10px;
-  margin-right: 80%;
-  padding: 2px 2px 2px 10px;
-  text-transform: capitalize;
+  width: 10%;  
 }
