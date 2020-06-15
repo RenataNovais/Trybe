@@ -47,7 +47,7 @@
       <li>Estado - ComboBox
         <ul>
           <li>Todos os estados do Brasil</li>
-          <li>Utilize estruturas de repetição via JavaScript para gerar os ```<option>```</li>
+          <li>Utilize estruturas de repetição via JavaScript para gerar os <<b>option</b>></li>
           <li>Campo obrigatório</li>
         </ul>
       </li>
@@ -59,7 +59,7 @@
       </li>
     </ul>
   </li>
-  <li>Crie outro ```<fieldset>``` para dados do seu último emprego
+  <li>Crie outro <<b>fieldset</b>> para dados do seu último emprego
     <ul>
       <li>Resumo do currículo - TextArea
         <ul>
@@ -93,10 +93,10 @@
   </li>
   <li>Logo abaixo do formulário, crie um botão que:
     <ul>
-      <li>Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o ```preventDefault()```.</li>
+      <li>Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o <i>preventDefault()</i>.</li>
       <li>Execute as validações que foram pedidas ao longo da montagem do formulário.</li>
-      <li>Monte uma ```<div>``` com o consolidado dos dados que foram inseridos no formulário.</li>
+      <li>Monte uma <<b>div</b>> com o consolidado dos dados que foram inseridos no formulário.</li>
     </ul>
   </li>
-  <li>Crie um botão Limpar que limpa todos os campos do formulário e a ```<div>``` com seu currículo também.</li>
+  <li>Crie um botão Limpar que limpa todos os campos do formulário e a <<b>div</b>> com seu currículo também.</li>
 </ol>
