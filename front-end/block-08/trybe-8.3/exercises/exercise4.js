@@ -34,7 +34,7 @@ const people = [
 // escreva filterPeople abaixo
 
 // solução com filter
-const filterPeople = people.filter(({nationality, bornIn}) => nationality == "Australian" && bornIn < 2000);
+const filterPeople = people.filter(({nationality, bornIn}) => nationality == "Australian" && bornIn < 2001);
 
 // solução com array destructuring
 // const filteredPeople = filterP(people) {
