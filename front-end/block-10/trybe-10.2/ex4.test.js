@@ -18,6 +18,8 @@ function twoStrToOne(first, second) {
   return first + ' ' + second;
 }
 
+module.exports = { strToUpper, strFirstLetter, twoStrToOne }
+
 describe('mocking functions', () => {
   test('srtToUpper now is toLower', () => {
     strToUpper = jest.fn().mockImplementation((str) => str.toLowerCase());
