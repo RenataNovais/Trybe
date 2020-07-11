@@ -17,12 +17,12 @@ This directory contains all projects developed by *[Renata Novais](https://renat
 ##### Introduction - Front-end
   * *[Project 07 - Facebook home](https://renatanovais.github.io/facebook/)*
 ##### JavaScript ES6 & Unit Tests
-  * *[Project 08 - JavaScript Unit Tests]()*
+  * *[Project - JavaScript Unit Tests](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project08-js-unit-tests)*
 ##### JavaScript ES6
-  * *[Project 09 - Zoo functions]()*
+  * *[Project - Zoo functions](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project09-zoo-functions)*
 ##### Asynchronicity & Callbacks
   * *[Project 10 - Shopping Cart](https://renatanovais.github.io/shopping-cart/)*
 ##### Jest
-  * *[Project - Asynchronous Jest and Mocking]()*
+  * *[Project - Asynchronous Jest and Mocking](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project11-jest)*
 ##### Introduction - React
-  * *[Project - Movie Cards Library]()*
+  * *[Project - Movie Cards Library](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project12-movie-cards-library)*

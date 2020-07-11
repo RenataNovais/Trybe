@@ -49,12 +49,12 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 7-2: *JavaScript ES6 - Objects*
 - [x] 7-3: *JavaScript unit tests*
 - [x] 7-4: *Testing in small steps*
-- [x] 7-5: *[Project - JavaScript Unit Tests]()*
+- [x] 7-5: *[Project - JavaScript Unit Tests](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project08-js-unit-tests)*
 ##### Block 8: JavaScript ES6
 - [x] 8-1: *JavaScript ES6 - Higher Order Functions - forEach, find, filter, some, every, sort*
 - [x] 8-2: *JavaScript ES6 - Higher Order Functions - map and reduce*
 - [x] 8-3: *JavaScript ES6 - spread operator, rest parameter, destructuring and more*
-- [x] 8-4: *Project - Zoo functions*
+- [x] 8-4: *[Project - Zoo functions](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project09-zoo-functions)*
 ##### Block 9: Asynchronicity & Callbacks
 - [x] 9-1: *First steps at Jest*
 - [x] 9-2: *Asynchronous JavaScript and Callbacks*
@@ -63,11 +63,11 @@ The program has more than **1,500 hours** of classroom and online classes and co
 ##### Block 10: Jest
 - [x] 10-1: *Jest - Asynchronous Tests*
 - [x] 10-2: *Jest - Simulating behaviors*
-- [x] 10-3: *Project - Asynchronous Jest and Mocking*
+- [x] 10-3: *[Project - Asynchronous Jest and Mocking](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project11-jest)*
 ##### Block 11: Introduction - React
 - [x] 11-1: *'Hello, world!' in React!*
 - [x] 11-2: *React Components*
-- [x] 11-3: *Project - Movie Cards Library*
+- [x] 11-3: *[Project - Movie Cards Library](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project12-movie-cards-library)*
 ##### Block 12: React
 - [ ] 12-1: *Components with status*
 - [ ] 12-2: *React events and forms*
