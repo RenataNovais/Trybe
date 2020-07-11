@@ -34,8 +34,8 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 5-1: *[Project - Meme Generator](https://renatanovais.github.io/meme-generator/)*
 - [x] 5-2: *[Project - Art with Pixels](https://renatanovais.github.io/make-me-an-artist/)*
 - [x] 5-3: *[Project - To Do List](https://renatanovais.github.io/to-do-list/)*
-- [ ] 5-4: *Project - Guess the Color*
-- [ ] 5-5: *Project - Mysterious Card*
+- [x] 5-4: *[Project - Guess the Color](https://renatanovais.github.io/color-guess/)*
+- [x] 5-5: *[Project - Mysterious Card](https://renatanovais.github.io/mistery-letter/)*
 
 ## Front-end development :hourglass_flowing_sand:
 ##### Block 6: Introduction - Front-end
@@ -49,7 +49,7 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 7-2: *JavaScript ES6 - Objects*
 - [x] 7-3: *JavaScript unit tests*
 - [x] 7-4: *Testing in small steps*
-- [x] 7-5: *Project - JavaScript Unit Tests*
+- [x] 7-5: *[Project - JavaScript Unit Tests]()*
 ##### Block 8: JavaScript ES6
 - [x] 8-1: *JavaScript ES6 - Higher Order Functions - forEach, find, filter, some, every, sort*
 - [x] 8-2: *JavaScript ES6 - Higher Order Functions - map and reduce*
