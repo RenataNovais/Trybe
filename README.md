@@ -43,7 +43,7 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 6-2: *JavaScript libraries and CSS frameworks*
 - [x] 6-3: *CSS Flexbox - Part 1*
 - [x] 6-4: *CSS Flexbox - Part 2*
-- [x] 6-5: *Project - Facebook home*
+- [x] 6-5: *[Project - Facebook home](https://renatanovais.github.io/facebook/index.html)*
 ##### Block 7: JavaScript ES6 & Unit Tests
 - [x] 7-1: *JavaScript ES6 - let, const, arrow functions and template literals*
 - [x] 7-2: *JavaScript ES6 - Objects*
