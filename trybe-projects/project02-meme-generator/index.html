@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Meme Generator</title>
+  </head>
+  <body>
+    <h1 class="mainTitle">MEME GENERATOR</h1>
+    <div class="allOptions">
+      <section class="infoSection">
+        <h2 class="subTitle">Let's make a cool MEME!</h2>
+        <p>Type here your <i>top</i> text:&emsp;&emsp;<input id="text-input-top" class="text-input-top" type="text" maxlength="30" placeholder="Your text must be less than 30 characters"></p>
+        <p>Type here your <i>bottom</i> text: <input id="text-input" class="text-input-bottom" type="text" maxlength="60" placeholder="Your text must be less than 60 characters"></p>
+        <p>Choose your photo: <input id="meme-insert" type="file"></p>
+      </section>
+      <section class="buttonSection">
+        <p>Select a border: </p>
+        <button id="fire" class="fireButton">Fire</button>
+        <button id="water" class="waterButton">Water</button>
+        <button id="earth" class="earthButton">Earth</button>
+      </section>
+      <section class="famousMemes">
+        <p>Don't know what photo use?<br> Try to start using one of these famous MEMES and have fun!</p>
+        <img id="meme-1" class="miniPic" src="imgs/meme1.png">
+        <img id="meme-2" class="miniPic" src="imgs/meme2.png">
+        <img id="meme-3" class="miniPic" src="imgs/meme3.png">
+        <img id="meme-4" class="miniPic" src="imgs/meme4.png">
+      </section>
+    </div>
+    <div id="meme-image-container" class="meme-image-container">
+      <img id="meme-image" class="meme-image"></img>
+      <div id="meme-text-top" class="meme-text-top"></div>
+      <div id="meme-text" class="meme-text"></div>
+      <br><br>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
