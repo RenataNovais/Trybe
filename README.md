@@ -20,7 +20,7 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 3-2: *HTML & CSS - Getting Started with CSS*
 - [x] 3-3: *HTML & CSS - Selectors and positioning*
 - [x] 3-4: *Semantic HTML*
-- [x] 3-5: *[Project - HTML & CSS](https://renatanovais.github.io/visa476/visa476.html)*
+- [x] 3-5: *[Project - HTML & CSS](https://renatanovais.github.io/visa476/)*
 ##### Block 4: Introduction - JavaScript
 - [x] 4-1: *JavaScript - Getting Started*
 - [x] 4-2: *JavaScript - For Array and Loop*
@@ -31,9 +31,9 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 4-7: *JavaScript - Events*
 - [x] 4-8: *JavaScript - Web Storage*
 ##### Block 5: Introduction - JavaScript - Projects
-- [x] 5-1: *[Project - Meme Generator](https://renatanovais.github.io/meme-generator/meme-generator.html)*
-- [x] 5-2: *[Project - Art with Pixels](https://renatanovais.github.io/make-me-an-artist/pixel-art.html)*
-- [x] 5-3: *[Project - To Do List](https://renatanovais.github.io/to-do-list/my-list.html)*
+- [x] 5-1: *[Project - Meme Generator](https://renatanovais.github.io/meme-generator/)*
+- [x] 5-2: *[Project - Art with Pixels](https://renatanovais.github.io/make-me-an-artist/)*
+- [x] 5-3: *[Project - To Do List](https://renatanovais.github.io/to-do-list/)*
 - [ ] 5-4: *Project - Guess the Color*
 - [ ] 5-5: *Project - Mysterious Card*
 
@@ -43,7 +43,7 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 6-2: *JavaScript libraries and CSS frameworks*
 - [x] 6-3: *CSS Flexbox - Part 1*
 - [x] 6-4: *CSS Flexbox - Part 2*
-- [x] 6-5: *[Project - Facebook home](https://renatanovais.github.io/facebook/index.html)*
+- [x] 6-5: *[Project - Facebook home](https://renatanovais.github.io/facebook/)*
 ##### Block 7: JavaScript ES6 & Unit Tests
 - [x] 7-1: *JavaScript ES6 - let, const, arrow functions and template literals*
 - [x] 7-2: *JavaScript ES6 - Objects*
@@ -54,20 +54,20 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 8-1: *JavaScript ES6 - Higher Order Functions - forEach, find, filter, some, every, sort*
 - [x] 8-2: *JavaScript ES6 - Higher Order Functions - map and reduce*
 - [x] 8-3: *JavaScript ES6 - spread operator, rest parameter, destructuring and more*
-- [ ] 8-4: *Project - Zoo functions*
+- [x] 8-4: *Project - Zoo functions*
 ##### Block 9: Asynchronicity & Callbacks
-- [ ] 9-1: *First steps at Jest*
-- [ ] 9-2: *Asynchronous JavaScript and Callbacks*
-- [ ] 9-3: *JavaScript Promises*
-- [ ] 9-4: *Project - Shopping Cart*
+- [x] 9-1: *First steps at Jest*
+- [x] 9-2: *Asynchronous JavaScript and Callbacks*
+- [x] 9-3: *JavaScript Promises*
+- [x] 9-4: *[Project - Shopping Cart](https://renatanovais.github.io/shopping-cart/)*
 ##### Block 10: Jest
-- [ ] 10-1: *Jest - Asynchronous Tests*
-- [ ] 10-2: *Jest - Simulating behaviors*
-- [ ] 10-3: *Project - Asynchronous Jest and Mocking*
+- [x] 10-1: *Jest - Asynchronous Tests*
+- [x] 10-2: *Jest - Simulating behaviors*
+- [x] 10-3: *Project - Asynchronous Jest and Mocking*
 ##### Block 11: Introduction - React
-- [ ] 11-1: *'Hello, world!' in React!*
-- [ ] 11-2: *React Components*
-- [ ] 11-3: *Project - Movie Cards Library*
+- [x] 11-1: *'Hello, world!' in React!*
+- [x] 11-2: *React Components*
+- [x] 11-3: *Project - Movie Cards Library*
 ##### Block 12: React
 - [ ] 12-1: *Components with status*
 - [ ] 12-2: *React events and forms*
