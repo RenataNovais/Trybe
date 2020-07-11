@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <title>Facebook - entre ou cadastre-se</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="top-bar">
+      <img class="facebook-logo" src="facebook-logo.png" width="170" />
+      <table class="login-info">
+        <tbody>
+          <tr>
+            <td>
+              <label id="user-email-phone-label" for="user-email-phone">Email ou telefone</label>
+            </td>
+            <td>
+              <label>Senha</label>
+            </td>
+          </tr>
+          <tr class="space-column">
+            <td>
+              <input id="user-email-phone" type="text" size="15px" />
+            </td>
+            <td>
+              <input id="user-password" type="password" size="15px" />
+            </td>
+            <td>
+              <button id="button-login" class="button-login">Entrar</button>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="forget-pass">Esqueceu a conta?</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </header>
+  <div class="grad">
+    <div class="container">
+      <section class="left-box">
+        <p>O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</p>
+        <img id="facebook-networking" src="networking.png" alt="imagem mapa do mundo e conexões entre pessoas"
+          width="537">
+      </section>
+      <section class="right-box">
+        <div class="registration-top">
+          <h1 class="main-title">Abra uma conta</h1>
+          <p>É rápido e fácil.</p>
+        </div>
+        <div class="registration-container">
+          <div class="inputLine">
+            <input class="nameInput" id="name" type="text" placeholder="Nome" />
+            <input class="nameInput" id="lastName" type="text" placeholder="Sobrenome" />
+          </div>
+          <div class="inputLine">
+            <input class="emailInput" id="email" type="text" placeholder="Celular ou email" />
+          </div>
+          <div class="inputLine">
+            <input class="emailInput" id="password" type="password" placeholder="Nova senha" />
+          </div>
+        </div>
+        <div class="b-date">
+          <p>Data de nascimento</p>
+          <input type="text" id="datepicker" placeholder="dd/mm/aaaa" />
+        </div>
+        <div class="b-date">
+          <p>Gênero</p>
+          <div class="genero">
+            <label for="feminino">
+              <input id="feminino" name="genero" class="radio" type="radio" value="Feminino" />Feminino
+            </label>
+            <label for="masculino">
+              <input id="masculino" name="genero" class="radio" type="radio" value="Masculino" />Masculino
+            </label>
+            <label for="personalizado">
+              <input id="personalizado" name="genero" class="radio" type="radio" value="Personalizado" />Personalizado
+            </label>
+          </div>
+        </div>
+        <p class="terms-text">
+          Ao clicar em Cadastre-se, você concorda com nossos Termos,
+          Política de Dados e Política de Cookies. Você pode receber notificações
+          por SMS e pode cancelar isso quando quiser.
+        </p>
+        <button class="signup" id="facebook-register">Cadastre-se</button>
+    </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="foot-container">
+      <div class="foot-line">
+        <ul>
+          <li>Português (Brasil)</li>
+          <li>English (US)</li>
+          <li>Español</li>
+          <li>Français (France)</li>
+          <li>Italiano</li>
+          <li>العربية</li>
+          <li>Deutsch</li>
+          <li>हिन्दी</li>
+          <li>中文(简体)</li>
+          <li>日本語</li>
+        </ul>
+      </div>
+      <div class="foot2">
+        <ul>
+          <li>Cadastre-se</li>
+          <li>Entrar</li>
+          <li>Messenger</li>
+          <li>Facebook Lite</li>
+          <li>Watch</li>
+          <li>Pessoas</li>
+          <li>Páginas</li>
+          <li>Categorias de Página</li>
+          <li>Locais</li>
+          <li>Jogos</li>
+          <li>Locais</li>
+          <li>Marketplace</li>
+          <li>Facebook Pay</li>
+          <li>Grupos</li>
+          <li>Oculus</li>
+          <li>Portal</li>
+          <li>Instagram</li>
+          <li>Local</li>
+          <li>Campanhas de arrecadação de fundos</li>
+          <li>Serviços</li>
+          <li>Sobre</li>
+          <li>Criar anúncio</li>
+          <li>Criar Página</li>
+          <li>Desenvolvedores</li>
+          <li>Carreiras</li>
+          <li>Privacidade</li>
+          <li>Cookies</li>
+          <li>Opções de anúncio</li>
+          <li>Termos</li>
+          <li>Ajuda</li>
+        </ul>
+      </div>
+      <div class="foot3">
+        <p>Facebook © 2020</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script src="pikaday.js"></script>
+<script>
+  var picker = new Pikaday({
+    field: document.getElementById('datepicker'),
+    format: 'DD/MM/YYYY',
+    toString(date, format) {
+      // you should do formatting based on the passed format,
+      // but we will just return 'D/M/YYYY' for simplicity
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+  });
+</script>
+
+</html>

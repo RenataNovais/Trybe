@@ -1,0 +1,116 @@
+body {
+  background-color: lightcyan;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.allOptions {
+  display: inline-block;
+  margin: 15px 20px 5px;
+  padding: 10px;
+}
+
+.infoSection {
+  border-top: 2px dashed dodgerblue;
+  padding: 5px;
+}
+
+.mainTitle {
+  background-color: dodgerblue;
+  border: 1px solid lightcyan;
+  color: lightcyan;
+  margin: auto 35%;
+  padding: 10px;
+  text-align: center;
+}
+
+.text-input-top, .text-input-bottom {
+  width: 300px;
+}
+
+.meme-image {
+  height: 100%;
+  width: 100%;
+}
+
+.buttonSection {
+  border-top: 2px dashed dodgerblue;
+  padding: 10px;
+}
+
+.meme-image-container {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 440px;
+  margin-left: 8%;
+  width: 440px;
+}
+
+.meme-text-top {
+  color: white;
+  font-family: Impact, Haettenschweiler, Arial Bold, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  left: 750px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+  text-transform: uppercase;
+  top: 200px;
+  width: 300px;
+  word-wrap: break-word;
+}
+
+.meme-text {
+  color: white;
+  font-family: Impact, Haettenschweiler, Arial Bold, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  left: 750px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+  text-transform: uppercase;
+  top: 398px;
+  width: 300px;
+  word-wrap: break-word;
+}
+
+.fireButton {
+  background-color: red;
+  border: 3px dashed red;
+  color: white;
+  height: 30px;
+  margin-top: 10px;
+  width: 60px;
+}
+
+.waterButton {
+  background-color: blue;
+  border: 5px double blue;
+  color: white;
+  height: 30px;
+  margin-top: 10px;
+  width: 60px;
+}
+
+.earthButton {
+  background-color: green;
+  border: 6px groove green;
+  color: white;
+  height: 30px;
+  margin-top: 3px;
+  width: 60px;
+}
+
+.famousMemes {
+  border-top: 2px dashed dodgerblue;
+  padding: 10px;
+}
+
+.miniPic {
+  border: 1px solid black;
+  height: 100px;
+  margin-top: 10px;
+  width: 100px;
+}
