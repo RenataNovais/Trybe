@@ -1,0 +1,61 @@
+body {
+  font-size: 20px;
+  margin: 20px;
+}
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 20px;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 15px auto;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-color: blue;
+    font-size: 18px;
+    margin: 50px;
+  }
+
+  .fig-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  body {
+    background-color: violet;
+    font-size: 35px;
+    margin: 50px 200px;
+  }
+
+  h1 {
+    font-size: 45px;
+    max-width: 70%;
+  }
+
+  h2 {
+    font-size: 40px;
+    max-width: 70%;
+  }
+
+  p {
+    max-width: 80%;
+  }
+
+  .fig-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+}
