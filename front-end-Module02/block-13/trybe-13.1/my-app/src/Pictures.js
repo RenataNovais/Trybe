@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Pictures = (props) => {
   const { height, src, alt, legenda } = props;
@@ -10,5 +11,11 @@ const Pictures = (props) => {
     </div>
   );
 }
+
+Pictures.prototype = {
+  alt: PropTypes.string,
+  height: PropTypes.number,
+}
+
 
 export default Pictures;
