@@ -26,7 +26,7 @@ class App extends Component {
           <ul>
             {
               listTodo.map((todo, index) => (
-                <li key={index + 1}>
+                <li data-testid="li" key={index + 1}>
                   <Item content={todo} />
                 </li>
               ))
