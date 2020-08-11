@@ -19,13 +19,13 @@ const renderSignal = (signalColor) => {
   return null;
 };
 
-export default function TrafficSignal({ signalColor, changeSignal }) {
+export function TrafficSignal({ signalColor, changeSignal }) {
   return (
     <div>
       <div className="button-container">
-        <button type="button">Red</button>
-        <button type="button">Yellow</button>
-        <button type="button">Green</button>
+        <button type="button" onClick={() => changeSignal('red')}>Red</button>
+        <button type="button" onClick={() => changeSignal('yellow')}>Yellow</button>
+        <button type="button" onClick={() => changeSignal('green')}>Green</button>
       </div>
       <img className="signal" src={renderSignal(signalColor)} alt="" />
     </div>
@@ -33,11 +33,11 @@ export default function TrafficSignal({ signalColor, changeSignal }) {
 }
 
 const mapStateToProps = (state) => ({
-  signalColor: state.reducer.signal.color,
+  signalColor: state.signal.color,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeSignal: () => dispatch(changeSignal()),
+  changeSignal: (payload) => dispatch(changeSignal(payload)),
 });
 
-connect(mapStateToProps, mapDispatchToProps)(TrafficSignal);
+export default connect(mapStateToProps, mapDispatchToProps)(TrafficSignal);
