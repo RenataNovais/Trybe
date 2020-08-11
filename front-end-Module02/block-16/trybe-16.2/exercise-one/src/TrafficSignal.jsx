@@ -1,9 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import redSignal from './images/redSignal.jpeg';
 import greenSignal from './images/greenSignal.jpeg';
 import yellowSignal from './images/yellowSignal.jpeg';
 import { changeSignal } from './redux/actionCreators';
-import { connect } from 'react-redux';
 
 
 const renderSignal = (signalColor) => {
