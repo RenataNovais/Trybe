@@ -8,3 +8,11 @@ export const handler = (event) => ({
   name: event.target.name,
   value: event.target.value,
 });
+
+export const clear = () => ({
+  type: 'CLEAR'
+});
+
+export const clearAll = () => ({
+  type: 'CLEAR_ALL'
+})

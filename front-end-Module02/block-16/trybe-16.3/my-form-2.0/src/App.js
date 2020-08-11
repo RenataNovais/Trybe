@@ -65,21 +65,21 @@ class App extends React.Component {
   //   this.userInfo(info);
   // } // ESSAS FUNÇÕES VIRARAM A AÇÃO SUBMIT E A SECTION AO FINAL DO FORMS
 
-  eraseForm() {
-    this.setState({
-      name: '',
-      email: '',
-      cpf: '',
-      address: '',
-      city: '',
-      countryState: '',
-      resume: '',
-      role: '',
-      roleDescription: '',
-    })
-    const userInfo = document.querySelector('.info');
-    if (userInfo) userInfo.remove();
-  }
+  // eraseForm() {
+  //   this.setState({
+  //     name: '',
+  //     email: '',
+  //     cpf: '',
+  //     address: '',
+  //     city: '',
+  //     countryState: '',
+  //     resume: '',
+  //     role: '',
+  //     roleDescription: '',
+  //   })
+  //   const userInfo = document.querySelector('.info');
+  //   if (userInfo) userInfo.remove();
+  // } // ESSA FUNÇÃO AGORA É A ACTION CLEAR
 
   render() {
     return (

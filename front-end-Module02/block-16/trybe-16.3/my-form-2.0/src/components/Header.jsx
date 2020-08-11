@@ -4,8 +4,12 @@ class Header extends React.Component {
   render() {
     return (
       <header className="App-header">
-        <h6 className="">React Form with Redux!</h6>
-        <h3>Cadastro de CV</h3>
+        <div className="header-info">
+          <h6>React Form with Redux!</h6>
+        </div>
+        <div className="header-title">
+          <h3>Cadastro de CV</h3>
+        </div>
       </header>
     );
   }

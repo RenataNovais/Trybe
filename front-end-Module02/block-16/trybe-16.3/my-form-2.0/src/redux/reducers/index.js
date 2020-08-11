@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   resume: '',
   role: '',
   roleDescription: '',
-  all: {},
+  all: [],
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -24,18 +24,38 @@ const reducer = (state = INITIAL_STATE, action) => {
       action.event.preventDefault(); 
       return {
         ...INITIAL_STATE,
-        all: {
-          name: state.name,
-          email: state.email,
-          cpf: state.cpf,
-          address: state.address,
-          city: state.city,
-          countryState: state.countryState,
-          resume: state.resume,
-          role: state.role,
-          roleDescription: state.roleDescription,
-        },
+        all: [
+          {
+            name: state.name,
+            email: state.email,
+            cpf: state.cpf,
+            address: state.address,
+            city: state.city,
+            countryState: state.countryState,
+            resume: state.resume,
+            role: state.role,
+            roleDescription: state.roleDescription,
+          },
+        ],
       };
+    case 'CLEAR':
+      return {
+        ...state,
+        name: '',
+        email: '',
+        cpf: '',
+        address: '',
+        city: '',
+        countryState: '',
+        resume: '',
+        role: '',
+        roleDescription: '',
+      };
+    case 'CLEAR_ALL':
+      return {
+        ...state,
+        all: []
+      }
     default:
       return state;
   }
