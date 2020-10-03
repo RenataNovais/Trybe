@@ -26,3 +26,21 @@ This directory contains all projects developed by *[Renata Novais](https://renat
   * *[Project 11 - Asynchronous Jest and Mocking](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project11-jest)*
 ##### Introduction - React
   * *[Project 12 - Movie Cards Library](https://github.com/RenataNovais/Trybe/tree/master/trybe-projects/project12-movie-cards-library)*
+##### React
+  * *[Project 13 - Movie Cards Library CRUD]()*
+##### Agile Methodologies
+  * *[Project 14 - Frontend Online Store]()*
+##### React Testing
+  * *[Project 15 - React Tests]()*
+##### React & Redux
+  * *[Project 16 - Table With Data Filters]()*
+##### React
+  * *[Project 17 - Trivia Game]()*
+##### React Hooks
+  * *[Project 18 - Datatable StarWars with Context API and Hooks]()*
+##### React
+  * *[Project 19 - Recipe App]()*
+
+## Back-end development :hourglass_flowing_sand:
+##### Introduction - Relational Databases
+  * *[Project 20 - All For One]()*
