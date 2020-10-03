@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/movie-library-stateful/static/css/main.9d45c01e.chunk.css",
+    "main.js": "/movie-library-stateful/static/js/main.7ced8bef.chunk.js",
+    "main.js.map": "/movie-library-stateful/static/js/main.7ced8bef.chunk.js.map",
+    "runtime-main.js": "/movie-library-stateful/static/js/runtime-main.38ed7d01.js",
+    "runtime-main.js.map": "/movie-library-stateful/static/js/runtime-main.38ed7d01.js.map",
+    "static/js/2.a924ad4d.chunk.js": "/movie-library-stateful/static/js/2.a924ad4d.chunk.js",
+    "static/js/2.a924ad4d.chunk.js.map": "/movie-library-stateful/static/js/2.a924ad4d.chunk.js.map",
+    "index.html": "/movie-library-stateful/index.html",
+    "precache-manifest.7942545c4561d94542bd6d8c3705d6c0.js": "/movie-library-stateful/precache-manifest.7942545c4561d94542bd6d8c3705d6c0.js",
+    "service-worker.js": "/movie-library-stateful/service-worker.js",
+    "static/css/main.9d45c01e.chunk.css.map": "/movie-library-stateful/static/css/main.9d45c01e.chunk.css.map",
+    "static/js/2.a924ad4d.chunk.js.LICENSE.txt": "/movie-library-stateful/static/js/2.a924ad4d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38ed7d01.js",
+    "static/js/2.a924ad4d.chunk.js",
+    "static/css/main.9d45c01e.chunk.css",
+    "static/js/main.7ced8bef.chunk.js"
+  ]
+}
