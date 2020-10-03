@@ -1,46 +1,72 @@
-# Boas vindas ao repositório do projeto de Movie Cards Library!
+# Boas vindas ao repositório do projeto de Movie Cards Library Stateful!
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
 ---
 
 ### Entrega
 
-- Projeto individual.
+  - Projeto individual.
 
-- Será um dia de projeto.
-
-- O projeto tem até a seguinte data: `17/07/2020 - 14:00h`. Para ser entregue a avaliação final.
+  - Será um dia de projeto.
+  
+  - O projeto tem até a seguinte data: `22/07/2020 - 14:00h`. Para ser entregue a avaliação final.
 
 
 ## O que deverá ser desenvolvido
 
-Você deverá desenvolver uma biblioteca de cartões de filmes utilizando React. A biblioteca deverá possuir um cabeçalho e uma lista de cartões. Cada cartão representa um filme e possui uma imagem, título, subtítulo, sinopse e avaliação. A biblioteca deverá ser algo parecido com a imagem abaixo.
+Você deverá desenvolver uma aplicação que consiste em uma biblioteca de cartões de filmes dinâmica utilizando React. A biblioteca é composta por:
 
-![image](preview.png)
+* Um cabeçalho;
 
-Você precisará implementar um conjunto de componentes em React que irão compor o seu App.
+* Uma barra de busca, utilizada pra filtrar quais cartões serão exibidos na lista de cartões;
 
-## Desenvolvimento e testes
+* Uma lista de cartões, onde cada cartão representa um filme e possui uma imagem, título, subtítulo, sinopse e avaliação;
 
-Este repositório já contem um _template_ com um App React criado e configurado. Após clonar o projeto e instalar as dependências (mais sobre isso abaixo), você não precisará realizar nenhuma configuração adicional. Você deverá completar este _template_ implementando os requisitos listados na próxima seção.
+* Um formulário para adicionar um novo cartão na biblioteca.
 
-Será necessário criar quatro `React Components`:
+Uma possível implementação dessa biblioteca consta abaixo.
+
+![image](preview.gif)
+
+Você precisará implementar componentes que em conjunto resultarão na biblioteca de cartões de filmes dinâmica.
+
+## Desenvolvimento
+
+Este repositório já contém um _template_ com um App React criado e configurado. Após clonar o projeto e instalar as dependências (mais sobre isso abaixo), você não precisará realizar nenhuma configuração adicional. Você deverá completar este _template_ implementando os requisitos listados na próxima seção.
+
+### Componentes
+
+Esse projeto contém os seguintes `React Components`:
 
    - Header
+   - MovieLibrary
+   - SearchBar
    - MovieList
    - MovieCard
    - Rating
+   - AddMovie
 
-Cada componente representa uma parte específica do site, conforme ilustrado abaixo:
+`Header`, `MovieList`, `MovieCard` e `Rating` já estão implementados. `MovieLibrary`, `SearchBar` e `AddMovie` já estão criados, mas precisam ser implementados de forma a passarem nos requisitos listados abaixo.
 
-![image](site-outline.png)
+Todos os componentes devem ser criados dentro da pasta `src/components`. **É obrigatório que seus componentes tenham exatamente os nomes listados acima**.
 
-Todos os componentes devem ser criados dentro da pasta `src/components`. **É importante que seus componentes tenham exatamente os nomes listados acima**.
+### Estado de componentes
 
-Todos os requisitos do projeto serão testados automaticamente. Os testes para cada requisitos estão no arquivo `src/App.test.js`. Gaste um tempo lendo-o para entender como os testes estão organizados.
+Os componentes que **precisam** ter estado a ser gerenciado são:
+
+   - MovieLibrary
+   - AddMovie
+
+## Testes
+
+Todos os requisitos do projeto serão testados **automaticamente**. Cada componente possui vários requisitos. Os testes para cada requisito de um componente estão no arquivo de teste correspondente.
+
+_**Por exemplo**: Os requisitos relacionados ao componente `SearchBar` estão no arquivo `SearchBar.test.js`._
+
+Separe um tempo para ler estes arquivos e entender como os testes estão organizados.
 
 Para executar os testes localmente, digite no terminal o comando `npm test`. Inicialmente, seus testes estarão assim:
 
@@ -81,7 +107,7 @@ Quando seu projeto estiver terminado, todos os testes deverão estar passando:
 
 ![image](all-green.png)
 
-#### Dica: desativanto testes
+#### Dica: desativando testes
 
 Especialmente no início, quando a maioria dos testes está falhando, a saída após executar os testes é bastante poluída. Você pode desabilitar temporariamente um teste utilizando a função `skip` junto à função `it`. Como o nome indica, esta função "pula" um teste:
 
@@ -99,7 +125,10 @@ Na saída da execução dos testes, você verá um <img src="orange-circle.png" 
 
 Uma estratégia é pular todos os testes no início e ir implementando um teste de cada vez, removendo dele a função `skip`.
 
-⚠️ Lembre-se de não entregar o projeto com nenhum teste ignorado. Testes ignoradados serão tratados como testes falhando.
+⚠️ Lembre-se de não entregar o projeto com nenhum teste ignorado. **Testes ignorados serão tratados como testes falhando**. ⚠️
+
+⚠️ **Não apague, em hipótese alguma, qualquer teste ou arquivo deste repositório.**. ⚠️
+
 
 #### Dica: watch mode
 
@@ -107,71 +136,217 @@ Ao executar os testes localmente, [Jest](https://jestjs.io/), a ferramenta que e
 
 ## Requisitos do projeto
 
-⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**
+⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando por **todos os _checks_** do **CodeClimate**. Use o _check_ do **TravisCI** para medir o seu progresso em relação aos requisitos! 😉
 
-#### 1 Crie um componente chamado `Header`
+#### Crie um componente chamado `SearchBar`
 
-Esse componente representará o cabeçalho da página.
+Esse componente renderizará uma barra com filtros acima da listagem de cartões. Quais cartões serão mostrados no componente `MovieList` dependerá dos filtros escolhidos. `SearchBar` deve receber como props:
 
-#### 2 Renderize o texto "Movie Cards Library" dentro de `Header`
+  - `searchText`, uma string
+  - `onSearchTextChange`, uma callback
+  - `bookmarkedOnly`, um boolean
+  - `onBookmarkedChange`, uma callback
+  - `selectedGenre`, uma string
+  - `onSelectedGenreChange`, uma callback
 
-O texto deverá estar dentro de uma tag `h1`, que por sua vez deve estar dentro de uma tag `header`.
+#### Renderize um formulário dentro de `SearchBar`
 
-#### 3 Crie um componente chamado `MovieList`
+Dentro desse formulário haverá campos usados na filtragem de cartões.
 
-Este componente representará toda a área com os cartões de filmes. `MovieList` deve receber uma prop `movies`, que é um array de objetos com informações de um filme.
+#### Renderize um input do tipo texto dentro do formulário em `SearchBar`
 
-#### 4 Renderize componentes `MovieCard` dentro de `MovieList`
+- O input deve ter uma label associada com o texto: **"Inclui o texto:"**;
 
-`MovieList` deve renderizar um componente `MovieCard` para cada objeto contido no array recebido na prop `movies`.
+- A propriedade `value` do input deve receber o valor da prop `searchText`;
 
-#### 5 Passe uma key para cada `MovieCard` renderizado
+- A propriedade `onChange` do input deve receber o valor da prop `onSearchTextChange`.
 
-`MovieList` deve renderizar `MovieCard`s de forma dinâmica. Ou seja, deve utilizar a função `map` para renderizar uma lista. Cada componente `MovieCard` deve receber uma prop `key` com o nome do filme.
+#### Renderize um input do tipo checkbox dentro do formulário em `SearchBar`
 
-#### 6 Crie um componente chamado `MovieCard`
+- O input deve ter uma label associada com o texto: **"Mostrar somente favoritos"**;
 
-Esse componente representa um cartão de filme. `MovieCard` deve receber uma prop `movie`. Essa prop será um objeto, contendo as propriedades, `title`, `subtitle`, `storyline`, `imagePath` e `rating`.
+- A propriedade `checked` do input deve receber o valor da prop `bookmarkedOnly`;
 
-#### 7 Renderize a imagem do filme
+- A propriedade `onChange` do input deve receber o valor da prop `onBookmarkedChange`.
 
-`MovieCard` deve renderizar uma tag `img`, tendo como atributo `src` o valor da propriedade `imagePath` do objeto recebido como prop.
+#### Renderize um select dentro do formulário em `SearchBar`
 
-#### 8 Renderize o título do filme
+- O select deve ter uma label associada com o texto: **"Filtrar por gênero"**;
 
-`MovieCard` deve renderizar o título do filme dentro de uma tag `h4`. O título está contido na propriedade `title` do objeto recebido como prop.
+- A propriedade `value` do select deve receber o valor da prop `selectedGenre`;
 
-#### 9 Renderize o subtítulo do filme
+- A propriedade `onChange` do input deve receber o valor da prop `onSelectedGenreChange`;
 
-`MovieCard` deve renderizar o subtítulo do filme dentro de uma tag `h5`. O subtítulo está contido na propriedade `subtitle` do objeto recebido como prop.
+- O `select` deve renderizar quatro tags `option`, com as opções de filtragem por gênero, na seguinte ordem:
+   - `Todos`, com o valor `""`;
+   - `Ação`, com o valor `action`;
+   - `Comédia`, com o valor `comedy`;
+   - `Suspense`, com o valor `thriller`.
 
-#### 10 Renderize a sinopse do filme
+#### Crie um componente chamado `AddMovie`
 
-`MovieCard` deve renderizar a sinopse do filme dentro de uma tag `p`. A sinopse está contida na propriedade `storyline` do objeto recebido como prop.
+Esse componente renderizará um formulário que permite adicionar na biblioteca um novo cartão de filme, dadas as seguintes informações do novo filme:
 
-#### 11 Renderize um componente `Rating` dentro de `MovieCard`
+  - subtítulo
+  - título
+  - caminho da imagem
+  - sinopse
+  - avaliação
+  - gênero
 
-`MovieCard` deve renderizar um componente `Rating`.
+`AddMovie` deve receber como props:
 
-#### 12 Passe como prop para o componente `Rating` o atributo `rating`
+  - `onClick`, uma callback
 
-`MovieCard` deve passar para o componente `Rating` uma prop chamada `rating`. O valor dessa prop é a propriedade `rating` do objeto recebido na prop `movie`.
+#### Configure o estado inicial do componente `AddMovie`
 
-#### 13 Crie um componente chamado `Rating`
+O componente `AddMovie` possui como estado as seguintes propriedades:
 
-Esse componene representa a avaliação de um filme.
+  - `subtitle`: guarda o subtítulo preenchido no formulário por quem usa a aplicação;
+  - `title`: guarda o título preenchido no formulário por quem usa a aplicação;
+  - `imagePath`: guarda o caminho da imagem preenchido no formulário por quem usa a aplicação;
+  - `storyline`: guarda a sinopse do filme escrita no formulário por quem usa a aplicação;
+  - `rating`: guarda a nota de avaliação dada no formulário por quem usa a aplicação;
+  - `genre`: guarda o gênero do filme selecionado no formulário por quem usa a aplicação.
 
-#### 14 Renderize a nota de um filme dentro de `Rating`
+Ou seja, o estado de `AddMovie` contém as informações do novo filme que foram inseridas por quem usa a aplicação.
 
-`Rating` deve renderizar a nota do filme recebido na prop `rating` dentro de um elemento com a classe `rating`.
+O estado inicial do componente `AddMovie` deve ser:
 
-#### 15 `App` deve renderizar `Header`
+  - `subtitle`: '';
+  - `title`: '';
+  - `imagePath`: '';
+  - `storyline`: '';
+  - `rating`: 0;
+  - `genre`: 'action'.
 
-O componente `App` deve renderizar um componente `Header`.
+#### Renderize um formulário dentro de `AddMovie`
 
-#### 16 `App` deve renderizar `MovieList`
+Dentro desse formulário haverá campos usados para preencher informações do novo cartão a ser adicionado na biblioteca.
 
-O componente `App` deve renderizar um componente `MovieList`, passando como prop `movies` a lista de filmes contida no arquivo `data.js`. Para isso, você precisará importar `data.js` dentro de `App.js`.
+#### Renderize um input do tipo texto dentro do formulário em `AddMovie` para obter o título do novo filme
+
+- O input deve ter uma label associada com o texto: **"Título"**;
+
+- O input deve ter seu valor inicial provido pelo estado inicial do componente, via `title`;
+
+- A propriedade `onChange` deve atualizar o estado de `AddMovie`, atribuindo a `title` o atual título contido no input.
+
+#### Renderize um input do tipo texto dentro do formulário em `AddMovie` para obter o subtítulo do novo filme
+
+- O input deve ter uma label associada com o texto: **"Subtítulo"**;
+
+- O input deve ter seu valor inicial provido pelo estado inicial do componente, via `subtitle`;
+
+- A propriedade `onChange` deve atualizar o estado de `AddMovie`, atribuindo a `subtitle` o atual subtítulo contido no input.
+
+#### Renderize um input do tipo texto dentro do formulário em `AddMovie` para obter o caminho da imagem do novo filme
+
+- O input deve ter uma label associada com o texto: **"Imagem"**;
+
+- O input deve ter seu valor inicial provido pelo estado inicial do componente, via `imagePath`;
+
+- A propriedade `onChange` deve atualizar o estado de `AddMovie`, atribuindo a `imagePath` o atual caminho da imagem contido no input.
+
+#### Renderize uma `textarea` dentro do formulário em `AddMovie` para obter a sinopse do novo filme
+
+- A `textarea` deve ter uma label associada com o texto: **"Sinopse"**;
+
+- A `textarea` deve ter seu valor inicial provido pelo estado inicial do componente, via `storyline`;
+
+- A propriedade `onChange` deve atualizar o estado de `AddMovie`, atribuindo a `storyline` a sinopse atual continda na `textarea`.
+
+#### Renderize um `input` do tipo `number` dentro do formulário em `AddMovie` para obter a avaliação do novo filme
+
+- O `input` deve ter uma label associada com o texto: **"Avaliação"**;
+
+- O `input` deve ter seu valor inicial provido pelo estado inicial do componente, via `rating`;
+
+- A propriedade `onChange` deve atualizar o estado de `AddMovie`, atribuindo a `rating` a avaliação atual continda no input.
+
+#### Renderize um `select` do formulário em `AddMovie` para selecionar o gênero do novo filme
+
+- O `select` deve ter uma label associada com o texto: **"Gênero"**;
+
+- O `select` deve ter seu valor inicial provido pelo estado inicial do componente, via `genre`;
+
+- A propriedade `onChange` deve atualizar o estado de `AddMovie`, atribuindo a `genre` o gênero atual selecionado;
+
+- O `select` deve renderizar três tags `option`, com as opções de filtragem por gênero, na seguinte ordem:
+   - `Ação`, com o valor `action`;
+   - `Comédia`, com o valor `comedy`;
+   - `Suspense`, com o valor `thriller`.
+
+#### Renderize um botão do formulário em `AddMovie` para fazer uso dos dados do novo filme, contidos no estado de `AddMovie`
+
+- O botão precisa ter escrito o seguinte texto: **"Adicionar filme"**;
+
+- A propriedade `onClick` do botão invoca uma função definida por você, em `AddMovie`, que:
+  - Executa a callback passada para o componente `AddMovie` via props, chamada `onClick`, que recebe como parâmetro o estado atual de `AddMovie`;
+  - Reseta o estado de `AddMovie`, voltando para o inicial, conforme mencionado anteriormente.
+
+#### Crie um componente chamado `MovieLibrary`
+
+Esse componente renderizará a biblioteca de filmes, com a possiblidade de filtrar por filmes e adicionar um filme à biblioteca.
+
+`MovieLibrary` deve receber como props:
+
+  - `movies`, um array
+
+#### Configure o estado inicial do componente `MovieLibray`
+
+O componente `MovieLibrary` possui como estado as seguintes propriedades:
+
+  - `searchText`: guarda o texto de busca por filmes;
+  - `bookmarkedOnly`: um _boolean_ que guarda se é para filtrar por filmes favoritados ou não;
+  - `selectedGenre`: guarda o gênero do filme selecionado para poder fazer a filtragem;
+  - `movies`: guarda a lista de filmes.
+
+Ou seja, o estado de `MovieLibrary` contém a lista de filmes e os filtros a serem aplicados sobre a listagem.
+
+O estado inicial do componente `MovieLibrary` deve ser:
+
+  - `searchText`: '';
+  - `bookmarkedOnly`: false;
+  - `selectedGenre`: '';
+  - `movies`: a lista de filmes passadas pela props `movies`.
+
+#### Renderize `SearchBar` dentro de `MovieLibrary`
+
+- `searchText` oriundo do estado de `MovieLibrary` deve ser passado para a prop `searchText` de `SearchBar`;
+
+- A callback para atualizar o estado de `MovieLibrary` em `searchText` precisa ser passada para `SearchBar`;
+
+- `bookmarkedOnly` oriundo do estado de `MovieLibrary` deve ser passado para a prop `bookmarkedOnly` de `SearchBar`;
+
+- A callback para atualizar o estado de `MovieLibrary` em `bookmarkedOnly` precisa ser passada para `SearchBar`;
+
+- `selectedGenre` oriundo do estado de `MovieLibrary` deve ser passado para a prop `selectedGenre` de `SearchBar`;
+
+- A callback para atualizar o estado de `MovieLibrary` em `selectedGenre` precisa ser passada para `SearchBar`.
+
+#### Renderize `MovieList` dentro de `MovieLibrary`
+
+- Deve passar para a prop `movies` de `MovieList` todos os filmes filtrados;
+
+- Quando o estado para `bookmarkedOnly` é falso, não é alterada a listagem de filmes a ser renderizada;
+
+- Quando o estado para `bookmarkedOnly` é verdadeiro, deve ser renderizado por `MovieList` somente filmes favoritados;
+
+- Quando o estado para `selectedGenre` é vazio, não é alterada a listagem de filmes a ser renderizada;
+
+- Quando o estado para `selectedGenre` não é vazio, deve ser renderizado somente filmes com o mesmo gênero;
+
+- Quando o estado para `searchText` é vazio, não é alterada a listagem de filmes a ser renderizada;
+
+- Quando o estado para `searchText` não é vazio, deve ser renderizado por `MovieList` filmes que satisfaçam a uma das condições abaixo:
+  - Filmes cujo título contém o que está presente em `searchText`, **ou**;
+  - Filmes cujo subtítulo contém o que está presente em `searchText`, **ou**;
+  - Filmes cuja sinopse contém o que está presente em` searchText`.
+
+#### Renderize `AddMovie` dentro de `MovieLibrary`
+
+- A callback que permite adicionar um novo filme ao final da lista precisa ser passada para `AddMovie`.
 
 ---
 
@@ -180,9 +355,9 @@ O componente `App` deve renderizar um componente `MovieList`, passando como prop
 ### ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-05-block11-project-movie-cards-library.git`.
+  * `git clone git@github.com:tryber/sd-05-block12-project-movie-card-library-stateful.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-05-block11-project-movie-cards-library`
+    * `cd sd-05-block12-project-movie-card-library-stateful`
 
 2. Instale as dependências, inicialize o projeto e rode os testes
   * Instale as dependências:
@@ -199,40 +374,59 @@ O componente `App` deve renderizar um componente `MovieList`, passando como prop
     * Exemplo: `git checkout master`
   * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
     * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-movie-cards-library`
+    * Exemplo: `git checkout -b joaozinho-movie-card-library-stateful`
 
-4. Crie a pasta `components` dentro da pasta `src` e um arquivo `Header.jsx` dentro dessa pasta:
-  * Verifique que você está na raiz do projeto
-    * Exemplo: `pwd` -> o retorno vai ser algo tipo _/Users/joaozinho/code/**sd-05-block11-project-movie-cards-library**_
-  * Crie a pasta `components` e o arquivo `Header.jsx`
-    * Exemplo:
-      * `mkdir src/components`
-      * `touch src/components/Header.jsx`
-      * `echo "// Iniciando o projeto 🚀" > src/components/Header.jsx`
+4. Faça alterações em algum dos componentes que precisam de implementação, por exemplo o `MovieLibrary` em `src/components`:
+```jsx
+import React, { Component } from 'react';
+
+import MovieList from './MovieList';
+import SearchBar from './SearchBar';
+import AddMovie from './AddMovie';
+
+class MovieLibrary extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h2> My awesome movie library </h2>
+        <SearchBar />
+        <MovieList movies={this.props.movies} />
+        <AddMovie />
+      </div>
+    );
+  }
+}
+
+export default MovieLibrary;
+```
 
 5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
   * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (deve aparecer listada a pasta _components_ em vermelho)
-  * Adicione o novo arquivo ao _stage_ do Git
+    * Exemplo: `git status` (deve aparecer listado o arquivo _src/components/MovieLibrary.jsx_ em vermelho)
+  * Adicione o arquivo alterado ao _stage_ do Git
       * Exemplo:
         * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (deve aparecer listado o arquivo _components/Header.jsx_ em verde)
+        * `git status` (deve aparecer listado o arquivo _src/components/MovieLibrary.jsx_ em verde)
   * Faça o `commit` inicial
       * Exemplo:
         * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
         * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
 6. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library`
+  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library-stateful`
 
 7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-05-block11-project-movie-cards-library/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-05-block12-project-movie-card-library-stateful/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-05-block11-project-movie-cards-library/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-05-block12-project-movie-card-library-stateful/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
@@ -248,8 +442,8 @@ O componente `App` deve renderizar um componente `MovieList`, passando como prop
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
   2. `git add` _(para adicionar arquivos ao stage do Git)_
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  5. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  4. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
+  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
 
 ---
 
