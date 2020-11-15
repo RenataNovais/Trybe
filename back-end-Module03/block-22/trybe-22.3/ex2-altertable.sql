@@ -1,0 +1,5 @@
+USE hr;
+
+ALTER TABLE regions CHANGE REGION_NAME region VARCHAR(25);
+
+SELECT * FROM regions;
